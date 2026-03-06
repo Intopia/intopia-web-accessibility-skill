@@ -1,0 +1,27 @@
+{
+  "checks": [
+    {
+      "id": "body-text-on-page",
+      "foreground": "#1f2937",
+      "background": "#ffffff",
+      "type": "text-normal",
+      "state": "default",
+      "notes": "Paragraph text"
+    },
+    {
+      "id": "input-border-default",
+      "foreground": "#6b7280",
+      "background": "#ffffff",
+      "type": "ui",
+      "state": "default",
+      "notes": "Input border must be >= 3:1"
+    },
+    {
+      "id": "focus-ring-primary-button",
+      "foreground": "#1d4ed8",
+      "background": "#ffffff",
+      "type": "ui",
+      "state": "focus"
+    }
+  ]
+}

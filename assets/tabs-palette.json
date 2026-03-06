@@ -1,0 +1,60 @@
+{
+  "checks": [
+    {
+      "id": "tab-inactive-text",
+      "foreground": "#1a1a1a",
+      "background": "#e5e5e5",
+      "type": "text-normal",
+      "state": "default",
+      "notes": "Tab label inactive"
+    },
+    {
+      "id": "tab-active-text",
+      "foreground": "#1a1a1a",
+      "background": "#ffffff",
+      "type": "text-normal",
+      "state": "selected",
+      "notes": "Tab label active"
+    },
+    {
+      "id": "panel-text",
+      "foreground": "#1a1a1a",
+      "background": "#ffffff",
+      "type": "text-normal",
+      "state": "default",
+      "notes": "Panel body text"
+    },
+    {
+      "id": "panel-heading",
+      "foreground": "#1a1a1a",
+      "background": "#ffffff",
+      "type": "text-normal",
+      "state": "default",
+      "notes": "Panel title"
+    },
+    {
+      "id": "border-ui",
+      "foreground": "#333333",
+      "background": "#ffffff",
+      "type": "ui",
+      "state": "default",
+      "notes": "Tab list and panel border"
+    },
+    {
+      "id": "focus-ring",
+      "foreground": "#0053b3",
+      "background": "#ffffff",
+      "type": "ui",
+      "state": "focus",
+      "notes": "Tab focus-visible outline"
+    },
+    {
+      "id": "focus-ring-on-inactive",
+      "foreground": "#0053b3",
+      "background": "#e5e5e5",
+      "type": "ui",
+      "state": "focus",
+      "notes": "Focus on inactive tab bg"
+    }
+  ]
+}

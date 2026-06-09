@@ -1,414 +1,356 @@
 ---
 name: intopia-web-accessibility
-description: Read this skill before building or modifying ANY HTML, CSS, JSX, TSX, React, Vue, or Svelte component, web page, dashboard, form, modal, button, navigation, card, table, poster, or email template — including small snippets. Governs WCAG 2.2 accessibility compliance, semantic HTML, ARIA, keyboard navigation, focus management, and colour contrast validation. Non-negotiable.
+description: Build accessible web user interfaces that meet WCAG 2.2 Level AA. Use whenever generating HTML, CSS, JSX, TSX, React, Vue, or Svelte components, pages, forms, modals, or email templates - including small snippets.
+user-invocable: true
 metadata:
   author: Intopia
-  version: "1.0"
+  version: "2.0"
 ---
-
-# Intopia Accessibility — Guide agents to build accessible components
-
-## MANDATORY — Always Use When Building HTML
-
-This skill MUST be used whenever building ANY HTML including components, pages, forms, modals, navigation, buttons, or layouts.
-
-**Keywords**: accessibility, a11y, WCAG, HTML, forms, modals, buttons, navigation, semantic HTML, ARIA, keyboard navigation, screen readers, web development
-
+ 
+## Overview
+ 
+Apply these accessibility principles whenever generating or modifying UI code. The goal is interfaces usable by people of all abilities, without workarounds.
+ 
+## Instructions
+ 
+1. Identify each UI component in the user's request.
+2. For every component identified, look it up in the **Component Index** below and read the linked acceptance criteria file (and code example file, if one exists). These are authoritative — do not generate component code without consulting them.
+3. If colour values are involved, consult `references/colour-contrast/Colour Contrast Reference.md`.
+4. Apply the Core Accessibility Principles below to fill any gaps not covered by the component-specific references.
+5. Generate the code.
+6. After presenting the code, list the specific accessibility decisions made, one line per component or pattern (e.g. "Modal: focus moves to heading on open, trapped while open, returns to trigger on close").
 ---
-
-## Anti-Hallucination Rules (Read These First — They Override Everything)
-
-These rules prevent the most common failure modes. They apply before any workflow step and cannot be waived.
-
-### File access — halt if you cannot read required files
-
-- **INDEX.md:** If you cannot open `INDEX.md` or get no content/error, stop and output exactly:
-
-> `SKILL HALTED: INDEX.md could not be read. I cannot proceed. Please verify the file exists alongside this skill (for example, ./INDEX.md) and retry. Do not ask me to continue using guessed or memorised paths.`
-
-- **Files referenced in INDEX.md:** If a file listed in INDEX.md cannot be read, output:
-
-> `SKILL HALTED: Could not read [exact file path from INDEX.md]. I cannot validate or build this component type without this file. Please check the path and retry.`
-
-Do not continue, guess paths, or invent content.
-
-### Proof-of-read — how to prove you read a file
-
-"I read the file" is not acceptable. For each reference file you open, output a reading receipt in this format before building or validating:
-
-```
-READ: [exact file path as listed in INDEX.md]
-Section: [the section heading the criterion appears under]
-Criterion: [a direct quote, under 30 words, from that section]
-```
-
-Without a real section and quote, do not proceed. Do not fabricate section names or criteria.
-
-### Script execution — never claim to have run a script you did not run
-
-Never state or imply the contrast script was run without actually executing it and seeing terminal output. Mental calculation or "looks correct" does not count.
-
-- If you ran it and it passed: `Contrast script executed. Output: zero failures.`
-- If you ran it and it failed: `Contrast script executed. Failures: [list failures]. Fixing now.`
-- If you cannot run it, state exactly:
-
-> `NOTICE: I cannot execute the contrast validation script in this environment. I will build the component and provide the palette JSON and the run command. Do not treat this output as contrast-validated until you run the script yourself.`
-
-### User override — what counts as an explicit override
-
-Valid only if the user: (1) acknowledges the accessibility risk by name (e.g. "I understand this will fail WCAG 2.4.7"), and (2) explicitly states they want to proceed despite the risk. Repeating the request, "just do it", or frustration does NOT count. Without a valid override, re-state the concern once and proceed with the accessible alternative.
-
-If a valid override is given, implement the minimum necessary and append:
-
-> `ACCESSIBILITY RISK: [Describe the issue and the WCAG criterion affected]. This was implemented at the user's explicit request.`
-
+ 
+## Component Index
+ 
+Per-component references live in `references/`. Use this index to locate the relevant files before generating code. A dash (—) means no file exists for that component in that category; fall back to the Core Accessibility Principles.
+ 
+| Component | Acceptance Criteria | Code Example |
+|---|---|---|
+| Accordion | `references/acceptance-criteria/Acceptance Criteria - Accordion.md` | — |
+| Button | `references/acceptance-criteria/Acceptance Criteria - Button.md` | `references/code-example/Code example - Button.md` |
+| Checkbox | `references/acceptance-criteria/Acceptance Criteria - Checkbox.md` | — |
+| Checkbox Group | `references/acceptance-criteria/Acceptance Criteria - Checkbox Group.md` | — |
+| Complex Image (diagram, graph, infographic) | `references/acceptance-criteria/Acceptance Criteria - Complex Image (e.g. diagram, graph, infographic).md` | `references/code-example/Code example - Complex Image (e.g. diagram, graph, infographic).md` |
+| Heading | `references/acceptance-criteria/Acceptance Criteria - Heading.md` | `references/code-example/Code example - Heading.md` |
+| Image | `references/acceptance-criteria/Acceptance Criteria - Image.md` | `references/code-example/Code example - Image.md` |
+| Landmark | `references/acceptance-criteria/Acceptance Criteria - Landmark.md` | `references/code-example/Code example - Landmark.md` |
+| Link | `references/acceptance-criteria/Acceptance Criteria - Link.md` | `references/code-example/Code example - Link.md` |
+| List | `references/acceptance-criteria/Acceptance Criteria - List.md` | `references/code-example/Code example - List.md` |
+| Modal Dialog | `references/acceptance-criteria/Acceptance Criteria - Modal Dialog.md` | — |
+| Page Language | `references/acceptance-criteria/Acceptance Criteria - Page Language.md` | `references/code-example/Code example - Page language.md` |
+| Page Title | `references/acceptance-criteria/Acceptance Criteria - Page Title.md` | `references/code-example/Code example - Page Title.md` |
+| Radio Group | `references/acceptance-criteria/Acceptance Criteria - Radio Group.md` | `references/code-example/Code example - Radio Group.md` |
+| Select | `references/acceptance-criteria/Acceptance Criteria - Select.md` | — |
+| Table | `references/acceptance-criteria/Acceptance Criteria - Table.md` | `references/code-example/Code example - Table.md` |
+| Tabs | `references/acceptance-criteria/Acceptance Criteria - Tabs.md` | — |
+| Text Field | `references/acceptance-criteria/Acceptance Criteria - Text Field.md` | `references/code-example/Code example - Text Field.md` |
+| Toggletip | `references/acceptance-criteria/Acceptance Criteria - Toggletip.md` | — |
+| Tooltip | `references/acceptance-criteria/Acceptance Criteria - Tooltip.md` | — |
+ 
+**Cross-cutting references**
+ 
+- Colour contrast: `references/colour-contrast/Colour Contrast Reference.md`
 ---
-
+ 
 ## Core Accessibility Principles
 
-### 1. Semantic HTML First
+### Foundations
 
-Use proper HTML elements for their intended purpose. Always check this hierarchy before reaching for ARIA:
+- Use semantic HTML first. Use elements for their intended purpose.
+- Use ARIA sparingly. ARIA enhances semantic HTML; it does not replace it. Never add ARIA roles to native elements that already have the correct role.
 
-1. **Is there a native HTML element that provides this semantics?** Use it. (e.g. `<button>`, `<a>`, `<nav>`, `<dialog>`)
-2. **If the native element has browser support gaps relevant to your target audience**, use the native element and enhance with ARIA only where gaps are documented.
-3. **Only if no native element exists** should you build a custom widget using `<div>` or `<span>` with ARIA roles.
+### Page Level
 
-Document which step you applied and why, if it is not obvious.
+- `<title>`: descriptive and unique per page.
+- `lang` attribute: set on `<html>` and matches the content language.
+- Landmarks: use `<header>`, `<nav>`, `<main>`, `<footer>`, `<aside>` for structure.
+- Headings: `<h1>` through `<h6>` in hierarchical order. Do not skip levels. Don't visually hide headings unless instructed to do so.
+- Skip link: provide a skip-to-main link to bypass repeated navigation. As a general guide, a skip link is unnecessary if there are fewer than 5 focusable items before the main content, but apply judgement based on context.
 
-Examples:
-- `<button>` for actions, `<a>` for navigation
-- `<header>`, `<nav>`, `<main>`, `<footer>`, `<aside>` for structure
-- `<h1>` through `<h6>` in hierarchical order — never skip a level
-- `<label>` for form inputs, `<fieldset>` and `<legend>` for grouped inputs
-- `<table>` for data tables with `<th>` and `scope` attributes
-- `<html lang="en">` — every page must have a `lang` attribute matching the content language (WCAG 3.1.1)
+### Semantic Markup
 
-### 2. ARIA — Use Sparingly and Correctly
+#### Lists
 
-ARIA should enhance, not replace, semantic HTML.
+Use the correct list type:
 
-**Explicit ARIA prohibition list — never do the following:**
+- `<ul>`: related items where order does not matter (navigation links, feature lists, search results).
+- `<ol>`: items where sequence matters (steps, rankings, instructions).
+- `<dl>`: term/value pairs (glossaries, metadata, key-value data).
 
-| Prohibited pattern | Why |
-|---|---|
-| `role="button"` on `<button>` | Native element already has this role |
-| `role="link"` on `<a>` | Native element already has this role |
-| `role="heading"` on `<h1>`–`<h6>` | Native element already has this role |
-| `aria-label` on `<p>`, `<div>`, `<span>`, `<li>`, or any non-interactive element | Invalid use; creates screen reader noise |
-| ARIA reference IDs that do not exist in the same HTML output | Broken references are worse than no ARIA |
+Do not use list markup for visual indentation. Avoid suppressing list semantics with `list-style: none`; some screen readers remove list semantics when this CSS is applied.
 
-**When ARIA is appropriate:**
-- `role="dialog"` with `aria-modal="true"` and `aria-labelledby` on a custom modal container (when native `<dialog>` is not used)
-- `aria-label` on a `<button>` that contains only an icon with no visible text
-- `aria-labelledby` to reference visible text as a label for a region or widget
-- `aria-describedby` for supplementary context (hints, errors) associated with an input
-- `aria-hidden="true"` on decorative icons or SVGs
-- `aria-live` regions for dynamic content updates (see Live Regions section below)
-- `aria-disabled` for disabled elements that are focusable
+#### Tables
 
-**ARIA reference integrity (mandatory):** Before finalising any HTML, check that every ID referenced in `aria-labelledby`, `aria-describedby`, or `aria-controls` exists in your output. If it does not, either add the element or remove the ARIA attribute.
+Use `<table>` for data with meaningful row/column relationships. Never use tables for visual layout.
 
-### 3. Keyboard Navigation
+- Use `<th>` for header cells, always with a `scope` attribute (`scope="col"` or `scope="row"`).
+- Use `<caption>` to name the table. Prefer `<caption>` over `aria-label` on the table element.
+- Use `<thead>`, `<tbody>`, and `<tfoot>` to group rows semantically.
+- For complex tables with multiple header levels, use `id` and `headers` to associate cells with their headers explicitly.
+- For layout tables (legacy code only), add `role="presentation"` to suppress table semantics. Do not use `<th>` in layout tables.
+- For sortable columns, put a `<button>` inside the `<th>` and set `aria-sort` (`ascending`, `descending`, or `none`) on that `<th>`. Only one column is sorted at a time; the rest are `none`.
 
-All interactive elements must be keyboard accessible. Apply these rules:
-
-- Tab order must follow the logical visual reading order — top to bottom, left to right
-- Use `tabindex="0"` to add a custom element to the tab order
-- Use `tabindex="-1"` only for programmatic focus (e.g. moving focus to a modal on open)
-- **NEVER use `tabindex` values greater than 0** — this breaks the natural tab order and is very difficult to maintain
-- Focus must never leave the visible viewport
-- Focus must never be lost (e.g. after closing a modal, focus must return to the trigger element)
-
-**Component keyboard interaction contracts — load the relevant acceptance criteria from INDEX.md for any custom widget, and follow these minimum patterns:**
-
-| Component | Required keyboard behaviour |
-|---|---|
-| Modal / Dialog | Tab / Shift+Tab cycles within the dialog only (focus trap). Escape closes and returns focus to the trigger. Focus moves to first focusable element inside dialog on open. |
-| Menu Button | Enter or Space opens the menu. Arrow Down moves to first item. Arrow Up / Down navigates items. Escape closes and returns focus to the trigger. |
-| Custom Tabs | Arrow Left / Right switches between tabs. Tab exits the tab list into the panel. Home / End move to first / last tab. |
-| Custom Select / Listbox | Enter or Space opens. Arrow Up / Down navigates options. Escape closes. Home / End jump to first / last. |
-| Accordion | Enter or Space toggles a panel. Arrow Up / Down navigates headers (if ARIA pattern is used). |
-| Combobox | Typing filters. Arrow Down opens / navigates list. Escape closes. Enter selects. |
-
-For any widget not listed here, load the ARIA Authoring Practices Guide (APG) pattern for that widget before coding. Do not rely on training knowledge for keyboard patterns.
-
-### 4. Focus Management on Dynamic Content
-
-When content is added to or removed from the DOM, focus must be managed explicitly:
-
-- **Modal opens:** Move focus to the first focusable element inside the modal, or to the modal container itself if it has `tabindex="-1"` and a descriptive label
-- **Modal closes:** Return focus to the element that triggered the modal
-- **Toast / alert appears:** Use `role="status"` or `role="alert"` with an appropriate `aria-live` value — do not move focus to the toast
-- **Accordion panel expands:** Focus stays on the accordion header trigger; do not move it
-- **Page content updates (SPA navigation):** Move focus to the new page heading or a skip-to-content region
-
-### 5. Live Regions
-
-Live regions are for content that **updates dynamically without user interaction and without a page reload**. They exist to notify screen reader users of changes they cannot see. They are not a general-purpose accessibility enhancer.
-
-**Use `aria-live` only when all three conditions are true:**
-1. The content changes dynamically (injected or mutated by JavaScript after page load)
-2. The update happens without the user explicitly triggering navigation (i.e. they are not moving focus themselves)
-3. The updated content is not already announced through focus management (e.g. a modal opening moves focus, so no live region is needed)
-
-If any condition is false, do not use a live region.
-
-**When NOT to use:** Static content, content the user navigated to (focus already announces), modals (focus handles it), tooltips, or when focus is already managed. Keep the live region around the smallest updated content, not a parent container.
-
-**Politeness levels:**
-- `aria-live="polite"` — announces after the screen reader finishes its current speech. Use for non-urgent updates: search result counts, filter feedback, async form hints.
-- `aria-live="assertive"` — interrupts the screen reader immediately. Reserve for genuinely urgent, time-sensitive errors only. If in doubt, use polite.
-
-**Prefer semantic roles over raw aria-live:**
-- `role="status"` is equivalent to `aria-live="polite"` + `aria-atomic="true"` — use for status messages
-- `role="alert"` is equivalent to `aria-live="assertive"` + `aria-atomic="true"` — use for critical errors when focus is sent to the first invalid field
-
-**Do not double-announce:** If an element's role already implies a live region (e.g. `role="dialog"`, `role="alert"`), do not also add `aria-live` to it or to a parent — this causes the message to be read twice.
-
-**aria-atomic:** Set `aria-atomic="true"` when the entire region should be read as a unit when any part changes. Omit it when only the changed portion should be announced.
-
-### 6. Colour Contrast (WCAG 2.2 Level AA)
-
-Text and UI components must have sufficient contrast:
-
-- **Normal text** (below 24px regular or 18.66px bold): 4.5:1 minimum
-- **Large text** (24px+ regular or 18.66px+ bold): 3:1 minimum
-- **UI components** (form field borders, button borders, focus indicators): 3:1 minimum
-- **Graphical objects** (meaningful icons, chart elements): 3:1 minimum
-- **Form field borders** are a frequent failure point — always check them explicitly
-- **Focus states** are a frequent failure point — always check them explicitly
-
-### 7. Focus Indicators
-
-All interactive elements need a visible focus indicator:
-
-- Do not rely on the default browser focus ring in design systems that apply `outline: 0` or `outline: none` via CSS resets — verify the default is actually visible in the target environment before assuming it is present
-- If the default is suppressed or insufficient, implement a custom focus style
-- Minimum 3:1 contrast ratio between the focus indicator and the adjacent background
-- Use `:focus-visible` to show focus rings for keyboard users without affecting mouse users
-- Never remove `outline` without replacing it with an equally visible alternative
-
-### 8. Alternative Text
-
-All meaningful images need text alternatives:
-
-- Decorative images: `alt=""` (empty string, not omitted)
-- Informative images: Describe the information conveyed, not the image literally
-- Functional images (inside links or buttons): Describe the action or destination
-- Complex images (charts, diagrams): Use `aria-describedby` pointing to a detailed text description nearby
-
-### 9. Form Error Handling
-
-Forms must communicate errors accessibly:
-
-- Always include the field name in the error message. Never use generic messages like "This field is required", instead provide a descriptive error that identifies the field by the label and provides an instruction to resolve the error e.g. "Please enter your first name."
-- Use `aria-invalid="true"` on an input when it has a validation error
-- Use `aria-describedby` on the input to point to the error message element
-- Error messages must be visible text — not just colour change or icon alone
-- On form submission failure, move focus to the first error or to a summary at the top of the form
-- Don't use `role="alert"` or `aria-live="assertive"` on the error message container on forms that set focus on the first invalid field or error summary.
-
-Example (one input + hint + error):
-```html
-<label for="email">Email Address</label>
-<input type="email" id="email" name="email" required aria-required="true" aria-invalid="true" aria-describedby="email-error email-hint">
-<p id="email-hint">We'll never share your email.</p>
-<p id="email-error">Enter a valid email address.</p>
+```
+<th scope="col" aria-sort="ascending"><button type="button">Name</button></th>
+<th scope="col" aria-sort="none"><button type="button">Role</button></th>
 ```
 
+#### Buttons and Links
+
+- `<button>`: triggers an action (submit, open modal, toggle, expand). Activated by Enter and Space.
+- `<a href>`: navigates to a location (page, anchor, URL). Activated by Enter.
+
+Never use `<div>`, `<span>`, or other non-interactive elements as buttons or links. If the design requires custom styling, style a native element rather than using ARIA to patch an incorrect one. If a link performs an action rather than navigating, use `<button>`.
+
+#### Accessible Names
+
+Every interactive element must have an accessible name. Apply in this order of preference:
+
+1. **Native label:** `<label>`, `<caption>`, `<figcaption>`, button text, link text.
+2. `aria-labelledby`**:** references visible text already on the page by `id`. Preferred when visible text exists.
+3. `aria-label`**:** use only when no visible text is available (e.g. an icon-only button). The value must match or begin with any visible text on the element (label-in-name requirement).
+
+Do not use `aria-label` to override or contradict visible text.
+
+```
+<!-- Icon-only button: use aria-label --> <button type="button" aria-label="Close dialog">  <svg aria-hidden="true" focusable="false">...</svg> </button> <!-- Label via aria-labelledby (preferred when visible text exists) --> <h2 id="billing-heading">Billing address</h2> <form aria-labelledby="billing-heading">...</form>
+```
+
+#### Roles
+
+Prefer native HTML elements over ARIA roles. When a custom component is unavoidable:
+
+- Assign the correct ARIA role (e.g. `role="dialog"`, `role="tab"`, `role="combobox"`).
+- Do not add roles to native elements that already carry the correct role (e.g. do not add `role="button"` to `<button>`).
+- Ensure required owned elements and required context are present (e.g. `role="option"` must be inside `role="listbox"`).
+
+#### State
+
+Interactive elements must expose their current state programmatically.
+
+| Pattern                                    | Attribute                                     |
+| :----------------------------------------- | :-------------------------------------------- |
+| Expandable control (accordion, disclosure) | `aria-expanded="true"` / `"false"`            |
+| Toggle button                              | `aria-pressed="true"` / `"false"`             |
+| Tab / option / treeitem                    | `aria-selected="true"` / `"false"`            |
+| Checkbox or switch                         | `aria-checked="true"` / `"false"` / `"mixed"` |
+| Functionally disabled (still focusable)    | `aria-disabled="true"`                        |
+| Current page in navigation                 | `aria-current="page"`                         |
+
+**Rule (prose):**
+
+**`aria-pressed` requires a true toggle.** Use `aria-pressed` only when pressing the button switches it between an active and inactive state, and the same button press deactivates it. If the button is one of a group where activation is exclusive (pressing it turns it on, but another button turns it off), it is not a toggle. In that case, either use a `role="radio"` group or communicate the active item with `aria-current="true"`. Using `aria-pressed` on a button that cannot be deactivated by its own press misrepresents the interaction to assistive technology.
+
+Use `aria-disabled="true"` instead of the `disabled` attribute when the element should remain focusable, so keyboard users can discover it and understand why it is unavailable. Pair it with a visible explanation where possible.
+
+#### Hiding Content
+
+- `aria-hidden="true"`: removes an element and its children from the accessibility tree. Use for decorative icons, duplicate text, and visually redundant content. Never apply to focusable elements.
+- `hidden` or `display: none`: removes content from both visual rendering and the accessibility tree. Use when content is not present.
+- Visually hidden but available to screen readers: use a `.visually-hidden` / `.sr-only` CSS class that clips the element without using `display: none` or `visibility: hidden`.
+
+```
+.visually-hidden {  position: absolute;  width: 1px;  height: 1px;  padding: 0;  margin: -1px;  overflow: hidden;  clip: rect(0, 0, 0, 0);  white-space: nowrap;  border: 0; }
+```
+
+### Keyboard Navigation
+
+- Tab order follows logical visual reading order (top to bottom, left to right).
+- Use `tabindex="0"` to include custom elements in the tab order.
+- Use `tabindex="-1"` only for programmatic focus management.
+- Never use `tabindex` values greater than 0.
+- Focus must never leave the visible viewport or be lost.
+
+### Focus Indicators
+
+- All interactive elements must have a visible focus indicator.
+- Use `outline: 2px solid` with `outline-offset: 2px` for focus states. Do not rely on the default browser focus ring in environments that apply `outline: 0` or `outline: none`.
+- Minimum 3:1 contrast ratio between the focus indicator and the adjacent background.
+- Use `:focus-visible` to show focus rings for keyboard users without affecting mouse users.
+- Never remove `outline` without an equally visible replacement.
+
+### Focus Management on Dynamic Content
+
+| Pattern           | Required behaviour                                           |
+| :---------------- | :----------------------------------------------------------- |
+| Modal opens       | Move focus to modal heading. Trap focus inside. Return focus to trigger on close. |
+| Menu opens        | Move focus to first item. Return focus to menu button on close. |
+| Toast / alert     | Use `role="status"` or `role="alert"` with `aria-live`. Do not move focus. |
+| Accordion expands | Focus stays on the header trigger. Do not move it.           |
+| SPA navigation    | Move focus to new page heading or `<main>`.                  |
+
+### Live Regions
+
+Use `aria-live` only when all three conditions are true:
+
+1. Content changes dynamically after page load.
+2. The change does not result from explicit user navigation.
+3. Focus management is not already handling the announcement.
+
+- `role="status"` (`aria-live="polite"`): non-urgent updates such as search result counts and filter feedback.
+- `role="alert"` (`aria-live="assertive"`): critical, time-sensitive errors only.
+- Set `aria-atomic="true"` only when the whole region should be read as a unit.
+
+### Progress Bars
+
+A static progress bar does not need ARIA roles — its information is best conveyed as text (e.g. "Step 2 of 4" or "60% complete"). If that text is not part of the visual design, include it visually hidden so screen reader users still get it.
+```
+<div class="progress-track"><div class="progress-fill" style="width: 60%"></div></div>
+<span class="visually-hidden">60% complete</span>
+```
+If the progress bar updates dynamically, use the progressbar role with value attributes so assistive technology announces changes:
+```
+<div role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" aria-label="Upload progress"></div>
+```
+
+### Forms
+
+#### Structure and Labels
+
+- Use `<label>` for every input. Associate explicitly with `for`/`id`; do not rely on wrapping alone.
+- Use `<fieldset>` and `<legend>` for grouped inputs (radio groups, checkboxes, date field sets, address field sets).
+- Never use `placeholder` as a substitute for a `<label>`. Placeholder text disappears on input, has insufficient contrast by default, and is not reliably announced by screen readers. **Exception:** A Search icon is a valid visual label for a search field providing the field has an accessible name e.g. Search.
+
+#### Input Types
+
+- Use the correct `type` attribute: `email`, `tel`, `number`, `date`, `password`, `search`, `url`. This provides appropriate keyboards on mobile and semantic meaning.
+- Use `autocomplete` attributes for personal data fields (e.g. `autocomplete="given-name"`, `autocomplete="email"`, `autocomplete="current-password"`). Required by WCAG 1.3.5.
+
+#### Required Fields
+
+- Mark required fields both visually and programmatically.
+- Use `required` and `aria-required="true"` on the input.
+
+```
+<label for="name">Full name <span aria-hidden="true">*</span></label> <input type="text" id="name" name="name" required aria-required="true" autocomplete="name">
+```
+
+#### Hints and Descriptions
+
+- Use `aria-describedby` to associate hints, constraints, or instructions with an input.
+- Place the hint element before the error message in the DOM so it is read first.
+- Hints must be persistent visible text, not placeholder or tooltip content.
+
+#### Form Error Handling
+
+- Do not rely on browser-native constraint validation (e.g. `required`, `type="email"` default popups). Always provide custom inline error messages.
+- Error messages must include the field name and a resolution instruction (e.g. "Enter your first name", not "This field is required").
+- Use `aria-invalid="true"` on inputs with validation errors.
+- Use `aria-describedby` to associate the error message with the input.
+- Error messages must be visible text, not colour or icon alone.
+- On submission failure, move focus to the first error or an error summary at the top of the form.
+- Do not use `role="alert"` or `aria-live="assertive"` on error containers when focus is already being moved to the error.
+
+```
+<label for="email">Email address</label> <input  type="email"  id="email"  name="email"  required  aria-required="true"  aria-invalid="true"  aria-describedby="email-hint email-error" > <p id="email-hint">We'll never share your email.</p> <p id="email-error">Enter a valid email address.</p>
+```
+
+#### Disabled and Read-only States
+
+- `disabled`: removes the element from the tab order and prevents interaction. Use only when the field genuinely cannot be used.
+- `readonly`: keeps the field focusable and its value submittable. Use when the value is visible but should not be changed.
+- Do not mark a field as both `disabled` and `required`.
+- Avoid disabling the submit button to signal an incomplete form. Keep it enabled and surface errors on submit instead.
+
+### Drag and Drop
+ 
+Any drag-and-drop interaction (reorderable lists, kanban boards, file sorting, repositioning items) must be fully operable without a pointer drag gesture. Pointer dragging may remain as an enhancement, but it must never be the only way to perform the action.
+ 
+#### Keyboard operation
+ 
+Provide a keyboard-operable mechanism using one of the following patterns. Either pattern must use native `<button>` elements, follow a logical tab order, and have visible focus indicators meeting 3:1 contrast.
+ 
+- **Drag handle with keyboard controls:** Make the handle a focusable native `<button>`. On activation (Enter or Space) the item enters a "grabbed" state where arrow keys move it between valid positions, Enter or Space drops it, and Escape cancels and returns it to its original position.
+- **Move menu / move controls:** Provide a `<button>` (e.g. "Move item") that opens a menu or exposes controls letting the user choose a new position directly (move up, move down, move to top, move to a named target). This is often simpler and more robust than a grabbed state, particularly when moving items between containers.
+
+#### Screen reader feedback
+ 
+The interaction must expose its state and outcome to screen reader users:
+ 
+- Give each draggable item and each drop target an accessible name describing what it is and where it is (e.g. "Task A, item 2 of 5, To Do column").
+- Describe the available keys in help text associated with the handle via `aria-describedby` (e.g. "Press Enter to pick up, arrow keys to move, Escape to cancel").
+- Announce every meaningful change through a polite live region (`role="status"` / `aria-live="polite"`): pick-up ("Grabbed Task A, position 2 of 5"), each move ("Task A, now position 3 of 5"), drop ("Dropped Task A at position 3 of 5"), and cancel ("Cancelled, Task A returned to position 2 of 5"). Do not use `aria-live="assertive"` for reorder status; assertive is reserved for critical, time-sensitive content.
+- Do not move focus to make an announcement; use the live region and keep focus on the item or handle being moved. 
+- Do not use `aria-pressed` to convey the grabbed state; communicate it through the live region announcement and `aria-describedby` help text instead.
+
+#### WCAG considerations
+ 
+- **2.5.7 Dragging Movements (AA):** Functionality that uses a dragging movement must also be operable with a single pointer without dragging (e.g. tap to select then tap to place, or up/down controls). The keyboard mechanism above does not by itself satisfy 2.5.7 — also provide a non-dragging pointer path.
+- **2.1.1 Keyboard (A):** All functionality available via drag must be available from the keyboard, with no keyboard trap. Escape must always exit the grabbed state.
+- **2.5.8 Target Size (AA):** Drag handles and move controls must meet the 24×24px minimum target size.
+
+#### Acceptance
+ 
+- Item can be reordered or moved using the keyboard alone.
+- Item can be reordered or moved using single-pointer taps without a drag gesture.
+- Grab, move, drop, and cancel are each announced to screen reader users via a polite live region.
+- Escape cancels an in-progress move and restores the original position.
+- Handles and controls are native buttons with visible focus and adequate target size.
+
+### Colour Contrast (WCAG 2.2 AA)
+
+| Content type                                    | Minimum ratio |
+| :---------------------------------------------- | :------------ |
+| Normal text (below 24px regular / 18.66px bold) | 4.5:1         |
+| Large text (24px+ regular / 18.66px+ bold)      | 3:1           |
+| UI components (borders, focus indicators)       | 3:1           |
+| Meaningful icons and graphical objects          | 3:1           |
+
+Form field borders and focus states are frequent failure points. Always check both explicitly. Verify every pair using the Colour Contrast Workflow below.
+
+### Alternative Text
+
+| Image type                         | Requirement                                                  |
+| :--------------------------------- | :----------------------------------------------------------- |
+| Decorative                         | `alt=""` (empty string; do not omit the attribute)           |
+| Informative                        | Describe the information conveyed, not the image literally   |
+| Functional (inside link or button) | Describe the action or destination                           |
+| Complex (chart, diagram)           | Use `aria-describedby` pointing to a nearby detailed text description |
+
+### Charts and Data Visualisations
+
+A chart is a complex image; the visual alone is never sufficient.
+
+Unless an interactive chart is explicitly requested, mark the chart (`<svg>`/`<canvas>`/wrapper) `aria-hidden="true"` and provide the data as the accessible equivalent: a marked-up `<table>` (see Tables) for exact values, or a text summary stating the takeaway (e.g. "Revenue rose steadily from Q1 to Q4, peaking at $1.2M") when the trend matters more. Place it adjacent to the chart or in a `<details>` disclosure directly after. The table or summary must be readable on its own, not gated behind hover or mouse-only controls. Give the chart a visible heading or `<figcaption>` for sighted context; the accessible name lives on the table `<caption>` or summary.
+
+The chart must still work visually: distinguish series without relying on colour alone (1.4.1) using labels, patterns, or markers; meet 3:1 for meaningful data elements (1.4.11) and text contrast (4.5:1, or 3:1 large) for labels, axes, and legends.
+
+If an interactive chart is explicitly requested, the chart cannot be `aria-hidden`: each focusable point needs a visible focus indicator and an accessible name conveying its value, still provide the data table, and respect `prefers-reduced-motion`.
+
+### Responsive Layout (WCAG 2.2 1.4.10 Reflow)
+
+Content must reflow without loss of information or functionality at a viewport width of 320 CSS pixels (vertical scrolling) or a height of 256 CSS pixels (horizontal scrolling). Users must not be required to scroll in two dimensions to read or interact with content. Tables, complex data visualisations, maps, and toolbars are exempt where 2D layout is essential to usage or meaning.
+
+#### Layout rules
+
+- Set `<meta name="viewport" content="width=device-width, initial-scale=1">` in `<head>`.
+- Use relative units (`%`, `rem`, `em`, `vw`, `ch`) for widths, padding, and font sizes. Avoid fixed pixel widths on layout containers.
+- Build layouts with Flexbox or CSS Grid. Use `flex-wrap: wrap`, or Grid with `repeat(auto-fit, minmax(<min>, 1fr))`, so columns collapse at narrow widths.
+- Stack horizontal navigation, toolbars, button groups, and multi-column forms vertically at narrow widths (use a media query around 600–768px).
+- Allow long strings (URLs, IDs, codes, email addresses) to break with `overflow-wrap: anywhere` or `word-break: break-word`. Long unbreakable strings are a common cause of 320px overflow.
+- Avoid horizontal-only scrolling regions for primary content. If a data table or diagram genuinely requires 2D layout, wrap it in a focusable scroll container so keyboard users can reach it:
+
+<div role="region" aria-label="Quarterly sales data" tabindex="0" style="overflow-x: auto;">   <table>...</table> </div>
+
+- Hide nothing at small widths that is available at large widths. Collapsing into a menu is acceptable; removing content is not.
+
 ---
-
-## Workflow for AI Agents
-
-### Step 0: Detect Your Execution Environment (Do This First, Every Time)
-
-Before anything else, declare: **File system access:** [yes / no]. **Shell execution:** [yes / no]. Do not assume — test by reading a file and report honestly. This determines which workflow branches apply.
-
----
-
-### Step 1: Load INDEX.md and Identify Resources (MANDATORY)
-
-**INDEX.md is the single source of truth for all file paths.** The file path examples in this document are illustrative only. Always get actual paths from INDEX.md. If INDEX.md and this document disagree on a path, INDEX.md takes precedence.
-
-1. Attempt to open `INDEX.md` from the intopia skill folder (the same folder as this file). If this fails, apply the halt rule from the Anti-Hallucination Rules section above.
-2. Identify the component or topic you are working on (e.g. modal, form, button, table, navigation).
-3. Find the matching section in INDEX.md. If the task is a full page, layout, or multi-component view, also locate the Page-level acceptance criteria section.
-4. Open each relevant reference file. If any file cannot be read, apply the halt rule above.
-5. For each file you successfully open, output a reading receipt (see Anti-Hallucination Rules — Proof-of-read).
-6. Always include the contrast resources for any visual UI work: the Colour Contrast Reference and the contrast check script path from INDEX.md.
-
-**Do not proceed to Step 2 until all reading receipts are complete.**
-
----
-
-### Step 2: Identify Component Type
-
-Using INDEX.md, load acceptance criteria (and code example if listed) for your component. For full pages or multi-component views, also load Page Level criteria.
-
----
-
-### Step 2a: Analyse User Instruction for Accessibility Risks (MANDATORY — applies to every request)
-
-This step applies to **every request**, even when no obvious risks are visible. There are no exceptions.
-
-- Review the user's instruction for requirements that commonly cause accessibility problems (see risk list below).
-- If no risks are found, write: `Instruction analysis complete — no accessibility risks detected.` then continue.
-- If risks are found:
-  - State the concern in plain language (which WCAG principle or criterion is at risk)
-  - Propose a concrete accessible alternative
-  - Proceed with the accessible alternative by default
-  - Only deviate if the user provides a valid explicit override (see Anti-Hallucination Rules — User override)
-
-**Risk triggers — flag and challenge requests that would:**
-
-- Remove or hide focus outlines or focus styles
-- Use icon-only buttons or links with no accessible name (`aria-label` or visible text)
-- Add auto-playing carousels or media without pause or stop controls
-- Use very small touch targets (below 44×44px)
-- Convey important information by colour or position alone
-- Implement custom interactive widgets (dropdowns, tabs, accordions) as non-focusable `<div>` elements with no keyboard support
-- Nest an interactive element inside another interactive element (e.g. a `<button>` inside an `<a>`)
-- Hide interactive controls so they are only visible on mouse hover (touch and keyboard users cannot access them)
-- Conflict with heading hierarchy, form labelling, or contrast requirements
-
----
-
-### Step 3: Design Analysis (Apply When User Provides a Design)
-
-Before building, check any provided mock, image, or wireframe for:
-
-- **Colour contrast**: Check all text/background combinations and UI component borders
-- **Form labels**: All inputs must have visible labels (not placeholder text only)
-- **Focus indicators**: Interactive elements must have visible focus states in the design
-- **Heading hierarchy**: Check that the heading structure is logical and uninterrupted
-- **Touch targets**: Minimum 44×44px on mobile
-
-**Proactive change notice (mandatory):** Never silently change a colour, element type, or layout. Output: `ACCESSIBILITY FIX: Changed [what] from [X] to [Y]. Reason: [explanation]. Meets: [requirement].`
-
----
-
-### Step 4: Build with Accessibility Embedded
-
-Apply these principles in order:
-
-1. Use semantic HTML elements — check the three-step hierarchy from Core Principles section 1
-2. Set `lang` attribute on the `<html>` element
-3. Add ARIA only where semantic HTML is insufficient — check the prohibition list first
-4. Verify all ARIA reference IDs (`aria-labelledby`, `aria-describedby`, `aria-controls`) exist in your output
-5. Implement keyboard navigation per the component contract table
-6. Implement focus management for any dynamic content
-7. Add focus indicators (do not rely on default if CSS resets are present)
-8. Associate all form labels with inputs; add error handling with `aria-invalid` and `aria-describedby`
-9. Add `alt` text for all images
-10. Follow heading hierarchy — no skipped levels
-
----
-
-### Step 5: Validate Before Presenting
-
-Work through this checklist. Do not present output until every item is confirmed. Do not tick any item without actually verifying it.
-
-- [ ] `<html>` element has a `lang` attribute matching the content language
-- [ ] All images have `alt` attributes (`alt=""` for decorative, descriptive text for informative)
-- [ ] Every form input has an associated `<label>` (via `for`/`id` or wrapping)
-- [ ] Form errors use `aria-invalid`, `aria-describedby`
-- [ ] All interactive elements are reachable by keyboard in logical order
-- [ ] No `tabindex` values greater than 0 are present
-- [ ] Links have descriptive text — no "click here", "read more", or "here"
-- [ ] Headings are hierarchical — no levels skipped
-- [ ] All ARIA reference IDs exist in the output (aria-labelledby, aria-describedby, aria-controls)
-- [ ] No prohibited ARIA patterns from the prohibition list are present
-- [ ] Focus management is implemented for any dynamic content (modals, alerts, SPA navigation)
-- [ ] Live regions use the correct `aria-live` value (`polite` or `assertive`)
-- [ ] Colour contrast meets 4.5:1 for normal text, 3:1 for large text and UI components
-- [ ] Form field borders meet 3:1 contrast minimum
+ 
+## Acceptance Criteria
+ 
+Generated code passes these checks before being presented to the user:
+ 
+- [ ] Page has a descriptive `<title>` and correct `lang` attribute
+- [ ] Landmark regions are present and correctly used
+- [ ] Heading hierarchy is logical with no skipped levels
+- [ ] All interactive elements have an accessible name, role, and state
+- [ ] Tab order is logical; no `tabindex` values greater than 0
 - [ ] Focus indicators are visible and meet 3:1 contrast
-- [ ] When delivering a full page or multi-component view: page-level acceptance criteria have been applied
-
----
-
-### Step 6: Run Mandatory Colour Contrast Validation
-
-**This is a required completion gate. Output is not finished until this step is done.**
-
-The approach depends on your environment (declared in Step 0):
-
-**If you have shell / script execution access:**
-
-1. Open `references/colour-contrast/Colour Contrast Reference.md` (path from INDEX.md). Output your reading receipt.
-2. Document every colour combination in your component: foreground colour, background colour, element type, and state (default, focus, hover, disabled).
-3. Create or update a palette JSON using the template from `assets/colour-contrast-template.json`.
-4. Execute the script from the repository root:
-   - `node "scripts/check-colour-contrast.js" <path-to-palette.json>`
-5. If any failures are reported, fix the colours and re-run. Repeat until the script reports zero failures.
-6. State the result: `Contrast script executed. Output: zero failures.`
-
-**If you do NOT have shell / script execution access:**
-
-Output prominently: `CONTRAST NOT VALIDATED. Run: node "scripts/check-colour-contrast.js" <palette.json>.` Then provide the full palette JSON so the user can run it immediately.
-
-**Never tick the contrast checkbox in Step 5 if you are in the no-shell branch.**
-
----
-
-### Step 7: Apply All Component-Specific Criteria
-
-After completing your reading receipts, apply every criterion from the loaded acceptance criteria files — not just the ones you noticed, all of them. For full pages, apply page-level criteria as well.
-
-Fix any issues before presenting. Do not ask permission.
-
----
-
-### Step 8: Present Accessible Code
-
-Present only the final, fully accessible version. Include:
-
-- All change notices for any deviation from the user's design or request
-- The contrast validation result (or the unvalidated notice and palette JSON)
-- Any ACCESSIBILITY RISK notices if a valid user override was applied
-
----
-
-## Common Patterns and Examples
-
-Load Code Examples from INDEX.md for Button, Landmark, Text Field, and other components. For **modals:** focus trap, focus on first focusable on open, return focus to trigger on close, Escape closes. Load Acceptance Criteria - Modal Dialog from INDEX.md. For **live regions:** use `role="status"` (polite) or `role="alert"` (assertive); avoid double-announce and combining with focus move.
-
----
-
-## WCAG 2.2 Success Criteria Coverage
-
-**Perceivable:** 1.1.1 (alt), 1.3.1 (semantics, labels), 1.3.2 (order), 1.4.3 (contrast), 1.4.11 (UI contrast). **Operable:** 2.1.1 (keyboard), 2.1.2 (no trap), 2.4.3 (focus order), 2.4.4 (link purpose), 2.4.6 (headings/labels), 2.4.7 (focus visible), 2.5.5 (target size). **Understandable:** 3.1.1 (lang), 3.2.1 (on focus), 3.2.2 (on input), 3.3.1 (error id), 3.3.2 (labels), 3.3.3 (error suggestion). **Robust:** 4.1.2 (name, role, value), 4.1.3 (status messages).
-
----
-
-## Communication Guidelines
-
-**Good:** Describe changes in plain language (e.g. "modal with focus trap and restoration", "contrast 2.85:1 → 7.0:1", "labels and aria-invalid added"). When challenging a request, state the risk and offer an accessible alternative. **Avoid:** Jargon without context; alarming error counts; silent design changes; ticking checkboxes without verifying.
-
----
-
-## Critical Rules Summary
-
-1. **Always detect your environment first** — shell access determines your contrast workflow branch
-2. **Never fake file reads** — halt and tell the user if INDEX.md or any reference file cannot be opened
-3. **Always produce reading receipts** — file path, section heading, and quoted criterion before building
-4. **Never fake script execution** — only claim the contrast script passed if you ran it and saw the output
-5. **Step 2a is unconditional** — analyse every instruction for accessibility risks, no exceptions
-6. **Fix proactively AND announce every fix** — never change a design element silently
-7. **Use semantic HTML before ARIA** — check the three-step hierarchy; consult the prohibition list
-8. **Implement full keyboard contracts** — use the component table; load APG patterns for unlisted widgets
-9. **Manage focus on dynamic content** — modals, alerts, SPA navigation all require explicit focus handling
-10. **Validate before presenting** — every checklist item must be confirmed, not assumed
-
----
-
-## Resource Files
-
-All resource paths are defined in INDEX.md (single source of truth). Paths in this document are illustrative only; INDEX.md takes precedence.
-
----
-
-## Summary
-
-This skill combines anti-hallucination rules (halt, receipts, no fake script run), environment detection, INDEX.md as source of truth, embedded accessibility principles, component and page-level criteria from references, mandatory contrast validation, and a pre-present checklist. Accessibility is applied by default.
+- [ ] Focus is managed correctly for modals, menus, and dynamic content
+- [ ] Live regions are used only where needed and are not duplicated
+- [ ] All form inputs have labels; grouped inputs use `<fieldset>`/`<legend>`
+- [ ] Form errors include the field name and resolution instruction
+- [ ] `aria-invalid` and `aria-describedby` are applied on validation failure
+- [ ] All meaningful images have appropriate alt text; decorative images use `alt=""`
+- [ ] Text contrast meets 4.5:1 (normal) or 3:1 (large text / UI components)

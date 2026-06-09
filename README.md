@@ -13,8 +13,7 @@ The skill is currently in active development. Supported components include forms
 
 ## What This Repository Contains
 
-- `SKILL.md` - the main skill instructions and workflow used by agents.
-- `INDEX.md` - the resource index mapping components to the right reference files.
+- `SKILL.md` - the main skill instructions, workflow, and the component index mapping components to the right reference files.
 - `references/acceptance-criteria/` - component-specific accessibility acceptance criteria.
 - `references/code-example/` - practical code examples for common accessible patterns.
 - `references/colour-contrast/` - colour contrast reference guidance.
@@ -38,7 +37,6 @@ Copy this repository into your agent's skills directory (or equivalent skill/lib
 After install, your agent should be able to load:
 
 - `SKILL.md`
-- `INDEX.md`
 - `references/...`
 - `scripts/...`
 
@@ -54,7 +52,7 @@ Provider-specific setup docs:
 
 ## How Agents Should Use It
 
-1. Open `INDEX.md` first.
+1. Open `SKILL.md` first and consult its Component Index.
 2. Identify the target component(s) and open matching acceptance-criteria files.
 3. Open any matching files in `references/code-example/`.
 4. For visual UI work, include contrast resources and produce/update a palette JSON.
@@ -81,7 +79,6 @@ The script will output pass/fail results per check and return a non-zero exit co
 ```text
 intopia-accessibility-skill/
   SKILL.md
-  INDEX.md
   assets/
     colour-contrast-template.json
     tabs-palette.json
@@ -97,8 +94,8 @@ intopia-accessibility-skill/
 ## Contributing
 
 - Keep reference content practical and implementation-focused.
-- Update `INDEX.md` whenever files are added, renamed, or moved.
-- Preserve path consistency between `INDEX.md`, `SKILL.md`, and actual folders.
+- Update the Component Index in `SKILL.md` whenever files are added, renamed, or moved.
+- Preserve path consistency between `SKILL.md`'s Component Index and the actual folders.
 - Prefer small, targeted updates with clear rationale.
 
 

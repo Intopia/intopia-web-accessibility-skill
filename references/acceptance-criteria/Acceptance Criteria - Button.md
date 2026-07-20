@@ -14,7 +14,7 @@ A button is an interactive element activated by a person using a mouse, keyboard
     
     *   **Type:** WCAG
         
-    *   **Success Criteria:** 2.4.6 Headings and Labels.
+    *   **Success Criteria:** 3.3.2 Labels or Instructions.
         
 #### **Semantic markup**
 

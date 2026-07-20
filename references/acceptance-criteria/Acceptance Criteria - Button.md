@@ -84,7 +84,7 @@ A button is an interactive element activated by a person using a mouse, keyboard
         
     *   **Success Criteria:** 1.4.3 Contrast (Minimum).
         
-*   If the button uses a custom focus style, then the focus style has a contrast ratio of 3:1 against the background colour.
+*   If the button uses a custom focus style, then the focus style has a contrast ratio of at least 3:1 against the adjacent colours: the button's background colour if the focus style sits within the button's boundary, or the surrounding content's colour if the focus style extends beyond it.
     
     *   **Type:** WCAG
         

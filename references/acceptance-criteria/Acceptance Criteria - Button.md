@@ -66,6 +66,10 @@ A button is an interactive element activated by a person using a mouse, keyboard
         
     *   **Success Criteria:** 2.4.7 Focus Visible.
         
+*   The button has a clear focus style in CSS forced-colors mode (e.g. Windows High Contrast Mode) when it receives focus using a keyboard.
+    
+    *   **Type:** Best practice
+        
 *   When the button receives focus using a keyboard, the button is not completely hidden by other content, such as a popup menu or tooltip.
     
     *   **Type:** WCAG

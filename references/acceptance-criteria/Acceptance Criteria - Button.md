@@ -120,18 +120,6 @@ In addition to acceptance criteria for button, the following acceptance criteria
     
     *   **Type:** Best practice
         
-An icon button with a text label has both an icon and a text label that describes its purpose or action.
-
-In addition to acceptance criteria for button, the following acceptance criteria apply.
-
-#### **Labels and messages**
-
-*   The icon (image) is not included in the accessibility tree.
-    
-    *   **Type:** WCAG
-        
-    *   **Success Criteria:** 1.1.1 Non-Text Content.
-        
 ### For Icon Buttons with Text
 
 An icon button with a text label has both an icon and a text label that describes its purpose or action.

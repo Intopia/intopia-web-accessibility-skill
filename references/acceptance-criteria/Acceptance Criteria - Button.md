@@ -92,13 +92,13 @@ A button is an interactive element activated by a person using a mouse, keyboard
         
 #### **Adaptive UI**
 
-*   The button's label can be increased up to 200% without being truncated, overlapping other text, or being cut off.
+*   The button's label can be increased up to 200% without being cut off, overlapping other text, or overunning the button boundary.
     
     *   **Type:** WCAG
         
     *   **Success Criteria:** 1.4.4 Resize Text.
         
-*   Text spacing can be increased without text overlapping, truncating or being cut off. See 1.4.12 Text Spacing for exact requirements.
+*   Text spacing can be increased without text being cut off, overlapping other text, or overunning the button boundary. See 1.4.12 Text Spacing for exact requirements.
     
     *   **Type:** WCAG
         

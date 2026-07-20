@@ -18,11 +18,15 @@ A button is an interactive element activated by a person using a mouse, keyboard
         
 #### **Semantic markup**
 
-*   The button's accessible name matches its visible label exactly, or at least starts with the exact text of the visible label.
+*   The button's accessible name contains the text of the visible label.
     
     *   **Type:** WCAG
         
     *   **Success Criteria:** 2.5.3 Label in Name.
+        
+*   The button's accessible name starts with the text of the visible label.
+
+    *   **Type:** Best practice
         
 *   The button's accessible name is included in the accessibility tree.
     

@@ -54,7 +54,7 @@ A button is an interactive element activated by a person using a mouse, keyboard
         
     *   **Success Criteria:** 2.1.1 Keyboard.
         
-*   When the button is activated, focus remains on the button.
+*   When the button is activated, focus is managed to preserve meaning and operability, if appropriate.
     
     *   **Type:** WCAG
         

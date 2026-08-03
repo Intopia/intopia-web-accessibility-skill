@@ -59,7 +59,7 @@ A toggletip is a small pop-up that shows extra information when you activate a b
         
 ### Keyboard
 
-*   The toggletip button is focusable using the Tab key.
+*   The toggletip button is focusable using a keyboard.
     
     *   **Type:** WCAG
         
@@ -75,13 +75,13 @@ A toggletip is a small pop-up that shows extra information when you activate a b
     
     *   **Type:** WCAG
         
-    *   **Success Criteria:** 1.4.13 Content on Hover or Focus (AA)
+    *   **Success Criteria:** 1.4.13 Content on Hover or Focus
         
 *   The toggletip content can be dismissed by moving keyboard focus away from the button.
     
     *   **Type:** WCAG
         
-    *   **Success Criteria:** 1.4.13 Content on Hover or Focus (AA)
+    *   **Success Criteria:** 1.4.13 Content on Hover or Focus
         
 ### Visual design
 
@@ -117,7 +117,7 @@ A toggletip is a small pop-up that shows extra information when you activate a b
     
     *   **Type:** WCAG
         
-    *   **Success Criteria:** 1.4.4 Resize Text (AA)
+    *   **Success Criteria:** 1.4.4 Resize Text
         
 *   The toggletip component can be viewed at smaller screen widths (320px) without loss of content or functionality, and without requiring horizontal scrolling.
     
@@ -129,4 +129,4 @@ A toggletip is a small pop-up that shows extra information when you activate a b
     
     *   **Type:** WCAG
         
-    *   **Success Criteria:** 1.4.12 Text Spacing (AA)
+    *   **Success Criteria:** 1.4.12 Text Spacing

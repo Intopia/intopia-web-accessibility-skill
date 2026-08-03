@@ -4,7 +4,7 @@ metadata:
   author: Intopia
   version: "1.0"
 ---
-A toggletip is a small pop-up that shows extra information when you activate a button, typically by clicking it or pressing the Space/Enter key on your keyboard.
+A toggletip is a small pop-up that shows extra information when you activate a button, typically by clicking it or pressing the Enter or Space key on your keyboard.
 
 ### Labels and messaging
 
@@ -40,13 +40,13 @@ A toggletip is a small pop-up that shows extra information when you activate a b
         
     *   **Success Criteria:** 1.3.1 Info and Relationships
         
-*   When focus is on the toggletip button and the toggletip panel is collapsed, pressing Enter expands the toggletip panel, and all content in the toggletip panel is included in the accessibility API.
+*   When focus is on the toggletip button and the toggletip panel is collapsed, pressing Enter or Space expands the toggletip panel, and all content in the toggletip panel is included in the accessibility API.
     
     *   **Type:** WCAG
         
     *   **Success Criteria:** 1.3.2 Meaningful Sequence
         
-*   When focus is on the toggletip button and the toggletip panel is expanded, pressing Enter collapses the toggletip panel, and all content in the toggletip panel is removed from the accessibility API.
+*   When focus is on the toggletip button and the toggletip panel is expanded, pressing Enter or Space collapses the toggletip panel, and all content in the toggletip panel is removed from the accessibility API.
     
     *   **Type:** WCAG  
         **Success Criteria:** 1.3.2 Meaningful Sequence
@@ -65,7 +65,7 @@ A toggletip is a small pop-up that shows extra information when you activate a b
         
     *   **Success Criteria:** 2.1.1 Keyboard
         
-*   The toggletip button is operable using Space/Enter keys.
+*   The toggletip button is operable using Enter or Space keys.
     
     *   **Type:** WCAG
         

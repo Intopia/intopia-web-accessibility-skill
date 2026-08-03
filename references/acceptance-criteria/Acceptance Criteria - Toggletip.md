@@ -103,13 +103,13 @@ A toggletip is a small pop-up that shows extra information when you activate a b
     
     *   **Type:** WCAG
         
-    *   **Success Criteria:** 1.4.11 Non-text Contrast)
+    *   **Success Criteria:** 1.4.11 Non-text Contrast
         
 *   If the toggletip button uses a custom focus style, the focus style has a contrast ratio of 3:1 against the background colours.
     
     *   **Type:** WCAG
         
-    *   **Success Criteria:** 1.4.11 Non-text Contrast)
+    *   **Success Criteria:** 1.4.11 Non-text Contrast
         
 ### **Adaptive UI**
 
@@ -119,7 +119,7 @@ A toggletip is a small pop-up that shows extra information when you activate a b
         
     *   **Success Criteria:** 1.4.4 Resize Text (AA)
         
-*   The toggletip component can be viewed at smaller screen widths (320px) without loss of content or functionality, and without requiring horizontal scrolling. tab elements or panels should reflow or stack as needed.
+*   The toggletip component can be viewed at smaller screen widths (320px) without loss of content or functionality, and without requiring horizontal scrolling.
     
     *   **Type:** WCAG
         

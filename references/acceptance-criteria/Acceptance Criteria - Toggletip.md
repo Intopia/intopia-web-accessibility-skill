@@ -82,6 +82,18 @@ A toggletip is a small pop-up that shows extra information when you activate a b
     *   **Type:** WCAG
         
     *   **Success Criteria:** 1.4.13 Content on Hover or Focus
+
+*   The toggletip button has a clear focus style when it receives focus using a keyboard.
+    
+    *   **Type:** WCAG
+        
+    *   **Success Criteria:** 2.4.7 Focus Visible
+        
+*   When the toggletip button is activated, focus stays on the toggletip button.
+    
+    *   **Type:** WCAG
+        
+    *   **Success Criteria:** 2.4.3 Focus Order
         
 ### Visual design
 

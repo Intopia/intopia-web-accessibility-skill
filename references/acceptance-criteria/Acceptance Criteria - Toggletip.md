@@ -4,7 +4,7 @@ metadata:
   author: Intopia
   version: "1.0"
 ---
-A toggletip is a small pop-up that shows extra information when you activate a button.
+A toggletip is a button with an associated pop-up of short content that shows when you activate the button.
 
 ### Labels and messaging
 
@@ -16,18 +16,7 @@ A toggletip is a small pop-up that shows extra information when you activate a b
         
 ### Semantic markup
 
-*   The toggletip button has a role of button in the accessibility tree.
-    
-    *   **Type:** WCAG
-        
-    *   **Success Criteria:** 4.1.2 Name, Role, Value
-        
-*   The toggletip button has an accessible name in the accessibility tree.
-    
-    *   **Type:** WCAG
-        
-    *   **Success Criteria:** 4.1.2 Name, Role, Value
-        
+
 *   The toggletip content's expanded or collapsed state is on the button in the accessibility tree.
 
     *   **Type:** WCAG
@@ -57,19 +46,7 @@ A toggletip is a small pop-up that shows extra information when you activate a b
     *   **Type:** Best Practice
 
 ### Keyboard
-
-*   The toggletip button is focusable using a keyboard.
-    
-    *   **Type:** WCAG
-        
-    *   **Success Criteria:** 2.1.1 Keyboard
-        
-*   The toggletip button is operable using Enter or Space keys.
-    
-    *   **Type:** WCAG
-        
-    *   **Success Criteria:** 2.1.1 Keyboard
-        
+                
 *   When the toggletip content is expanded, it can be collapsed by pressing the Escape key.
     
     *   **Type:** WCAG
@@ -78,15 +55,7 @@ A toggletip is a small pop-up that shows extra information when you activate a b
         
 *   The toggletip content is collapsed when keyboard focus moves away from the button.
     
-    *   **Type:** WCAG
-        
-    *   **Success Criteria:** 1.4.13 Content on Hover or Focus
-
-*   The toggletip button has a visible focus style when it receives focus using a keyboard.
-    
-    *   **Type:** WCAG
-        
-    *   **Success Criteria:** 2.4.7 Focus Visible
+    *   **Type:** Best Practice
         
 *   When the toggletip button is activated, focus stays on the toggletip button.
     
@@ -99,20 +68,8 @@ A toggletip is a small pop-up that shows extra information when you activate a b
 *   The toggletip content appears visually when the button is activated.
     
     *   **Type:** Best Practice
-        
-*   All text within the toggletip component (trigger label, content text) meets the minimum contrast ratio of 4.5:1 against the background colour, or 3:1 for large-scale text (24px or 18.5px and bold).
     
-    *   **Type:** WCAG
-        
-    *   **Success Criteria:** 1.4.3 Contrast (Minimum)
-        
 *   Icons (for example, the toggletip button icon) have a minimum contrast ratio of 3:1 against the background colour.
-    
-    *   **Type:** WCAG
-        
-    *   **Success Criteria:** 1.4.11 Non-text Contrast
-        
-*   If the toggletip button uses a custom focus style, the focus style has a contrast ratio of 3:1 against the background colours.
     
     *   **Type:** WCAG
         

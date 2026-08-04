@@ -13,6 +13,7 @@ Per-component references live in `references/`. A dash (—) means no file exist
 | Checkbox | `references/acceptance-criteria/Acceptance Criteria - Checkbox.md` | — |
 | Checkbox Group | `references/acceptance-criteria/Acceptance Criteria - Checkbox Group.md` | — |
 | Complex Image (diagram, graph, infographic) | `references/acceptance-criteria/Acceptance Criteria - Complex Image (e.g. diagram, graph, infographic).md` | `references/code-example/Code example - Complex Image (e.g. diagram, graph, infographic).md` |
+| Disclosure | `references/acceptance-criteria/Acceptance Criteria - Disclosure.md` | `references/code-example/Code example - Disclosure.md` |
 | Heading | `references/acceptance-criteria/Acceptance Criteria - Heading.md` | `references/code-example/Code example - Heading.md` |
 | Image | `references/acceptance-criteria/Acceptance Criteria - Image.md` | `references/code-example/Code example - Image.md` |
 | Landmark | `references/acceptance-criteria/Acceptance Criteria - Landmark.md` | `references/code-example/Code example - Landmark.md` |

@@ -4,7 +4,7 @@ metadata:
   author: Intopia
   version: "1.0"
 ---
-A toggletip is a small pop-up that shows extra information when you activate a button, typically by clicking it or pressing the Enter or Space key on your keyboard.
+A toggletip is a small pop-up that shows extra information when you activate a button.
 
 ### Labels and messaging
 
@@ -16,7 +16,7 @@ A toggletip is a small pop-up that shows extra information when you activate a b
         
 ### Semantic markup
 
-*   The toggletip button has the button role in the accessibility tree.
+*   The toggletip button has a role of button in the accessibility tree.
     
     *   **Type:** WCAG
         
@@ -28,35 +28,34 @@ A toggletip is a small pop-up that shows extra information when you activate a b
         
     *   **Success Criteria:** 4.1.2 Name, Role, Value
         
-*   The toggletip button's expanded or collapsed state is included in the accessibility tree.
-    
+*   The toggletip content's expanded or collapsed state is on the button in the accessibility tree.
+
     *   **Type:** WCAG
         
     *   **Success Criteria:** 4.1.2 Name, Role, Value
         
-*   The toggletip button has aria-controls set to the ID of the element containing the toggletip panel content.
+*   The toggletip button has an aria-controls attribute set to the ID of the element containing the toggletip content.
     
     *   **Type:** WCAG
         
     *   **Success Criteria:** 1.3.1 Info and Relationships
         
-*   When focus is on the toggletip button and the toggletip panel is collapsed, pressing Enter or Space expands the toggletip panel, and all content in the toggletip panel is included in the accessibility API.
+*   When the toggletip content is collapsed, it is not in the accessibility tree.
     
     *   **Type:** WCAG
         
     *   **Success Criteria:** 1.3.2 Meaningful Sequence
         
-*   When focus is on the toggletip button and the toggletip panel is expanded, pressing Enter or Space collapses the toggletip panel, and all content in the toggletip panel is removed from the accessibility API.
+*   When the toggletip content is expanded, it comes directly after the toggletip button in the accessibility tree.
     
-    *   **Type:** WCAG  
+    *   **Type:** WCAG
+
         **Success Criteria:** 1.3.2 Meaningful Sequence
-        
-*   The content in the toggletip panel comes directly after the toggletip header in the accessibility tree.
-    
-    *   **Type:** WCAG
-        
-    *   **Success Criteria:** 1.3.2 Meaningful Sequence
-        
+
+*   The toggletip button only shows or hides the toggletip content.
+
+    *   **Type:** Best Practice
+
 ### Keyboard
 
 *   The toggletip button is focusable using a keyboard.
@@ -71,19 +70,19 @@ A toggletip is a small pop-up that shows extra information when you activate a b
         
     *   **Success Criteria:** 2.1.1 Keyboard
         
-*   The toggletip content can be dismissed by pressing the Escape key.
+*   When the toggletip content is expanded, it can be collapsed by pressing the Escape key.
     
     *   **Type:** WCAG
         
     *   **Success Criteria:** 1.4.13 Content on Hover or Focus
         
-*   The toggletip content can be dismissed by moving keyboard focus away from the button.
+*   The toggletip content is collapsed when keyboard focus moves away from the button.
     
     *   **Type:** WCAG
         
     *   **Success Criteria:** 1.4.13 Content on Hover or Focus
 
-*   The toggletip button has a clear focus style when it receives focus using a keyboard.
+*   The toggletip button has a visible focus style when it receives focus using a keyboard.
     
     *   **Type:** WCAG
         
@@ -101,17 +100,13 @@ A toggletip is a small pop-up that shows extra information when you activate a b
     
     *   **Type:** Best Practice
         
-*   The toggletip button uses an icon (for example, an "i" icon).
-    
-    *   **Type:** Best Practice
-        
 *   All text within the toggletip component (trigger label, content text) meets the minimum contrast ratio of 4.5:1 against the background colour, or 3:1 for large-scale text (24px or 18.5px and bold).
     
     *   **Type:** WCAG
         
     *   **Success Criteria:** 1.4.3 Contrast (Minimum)
         
-*   Interactive icons (for example, the toggletip button icon) have a minimum contrast ratio of 3:1 against the background colour.
+*   Icons (for example, the toggletip button icon) have a minimum contrast ratio of 3:1 against the background colour.
     
     *   **Type:** WCAG
         
@@ -123,7 +118,7 @@ A toggletip is a small pop-up that shows extra information when you activate a b
         
     *   **Success Criteria:** 1.4.11 Non-text Contrast
         
-### **Adaptive UI**
+### Adaptive UI
 
 *   Text within the toggletip component can be increased up to 200% without being truncated, overlapping other text, or being cut off.
     

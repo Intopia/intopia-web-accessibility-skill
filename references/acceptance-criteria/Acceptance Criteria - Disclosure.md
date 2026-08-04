@@ -40,19 +40,19 @@ A disclosure is a button that shows or hides a section of related content.
         
     *   **Success Criteria:** 1.3.1 Info and Relationships
         
-*   When the content is collapsed the content is not included in the accessibility tree.
+*   When the content is collapsed, it is not included in the accessibility tree.
     
     *   **Type:** WCAG
         
     *   **Success Criteria:** 1.3.2 Meaningful Sequence
         
-*   When the content is expanded the content is included in the accessibility tree.
+*   When the content is expanded, it is included in the accessibility tree.
     
     *   **Type:** WCAG
         
     *   **Success Criteria:** 1.3.2 Meaningful Sequence
         
-*   The disclosed content comes directly after the disclosure button in the accessibility tree.
+*   The content comes directly after the disclosure button in the accessibility tree.
     
     *   **Type:** WCAG
         
@@ -72,17 +72,17 @@ A disclosure is a button that shows or hides a section of related content.
         
     *   **Success Criteria:** 2.4.3 Focus Order
 
-*   When focus is on the disclosure button and the content is collapsed, pressing Enter or Space expands the content
+*   When focus is on the disclosure button and the content is collapsed, pressing Enter or Space expands the content.
     
     *   **Type:** WCAG
         
-    *   **Success Criteria:** 1.3.2 Meaningful Sequence
+    *   **Success Criteria:** 2.1.1 Keyboard
         
-*   When focus is on the disclosure button and the content is expanded, pressing Enter or Space collapses the content
+*   When focus is on the disclosure button and the content is expanded, pressing Enter or Space collapses the content.
     
     *   **Type:** WCAG
         
-    *   **Success Criteria:** 1.3.2 Meaningful Sequence
+    *   **Success Criteria:** 2.1.1 Keyboard
         
 *   The disclosure button has a focus style when it receives focus using a keyboard.
     
@@ -90,14 +90,13 @@ A disclosure is a button that shows or hides a section of related content.
         
     *   **Success Criteria:** 2.4.7 Focus Visible
         
-        
 ### Visual design
 
 *   A visual indicator (for example, an arrow icon) shows whether the content is expanded or collapsed.
     
-    *   **Type:** Best practice
+    *   **Type:** Best Practice
         
-*   All text meets the minimum contrast ratio of 4.5:1 against the background colours, or 3:1 for large-scale text (24px or 18.5px and bold).
+*   All text meets the minimum contrast ratio of 4.5:1 against the background colour, or 3:1 for large-scale text (24px or 18.5px and bold).
     
     *   **Type:** WCAG
         

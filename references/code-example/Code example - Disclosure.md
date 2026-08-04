@@ -54,7 +54,7 @@ The disclosure button has aria-controls set to the ID of the element containing 
 
 * * *
 
-When the content is collapsed the content is not included in the accessibility tree.
+When the content is collapsed it is not included in the accessibility tree.
 
 <button aria-expanded="false" aria-controls="shipping-details">Shipping details</button>
 <div id="shipping-details" hidden>
@@ -63,7 +63,7 @@ When the content is collapsed the content is not included in the accessibility t
 
 * * *
 
-When the content is expanded the content is included in the accessibility tree.
+When the content is expanded it is included in the accessibility tree.
 
 <button aria-expanded="true" aria-controls="shipping-details">Shipping details</button>
 <div id="shipping-details">

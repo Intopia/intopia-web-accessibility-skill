@@ -47,12 +47,16 @@ A toggletip is a button with an associated pop-up of short content that shows wh
 
 ### Keyboard
                 
-*   When the toggletip content is expanded, it can be collapsed by pressing the Escape key.
-    
+*   When the toggletip button has focus and the toggletip content is expanded, the content can be collapsed by pressing the Escape key.
+
+    *   **Type:** Best Practice
+
+*   When an interactive element in the toggletip content has focus, the content can be collapsed by pressing the Escape key, and focus returns to the toggletip button.
+
     *   **Type:** WCAG
-        
-    *   **Success Criteria:** 1.4.13 Content on Hover or Focus
-        
+
+    *   **Success Criteria:** 2.4.3 Focus Order
+
 *   The toggletip content is collapsed when keyboard focus moves away from the button.
     
     *   **Type:** Best Practice

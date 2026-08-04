@@ -56,6 +56,12 @@ In addition to the Interactive Control acceptance criteria, the following accept
 
 ### **Semantic markup**
 
+*   The select has the combobox role in the accessibility tree. Note, a native single-option `<select>` exposes the combobox role; a select that allows multiple options (`multiple`, or a `size` greater than 1) exposes the listbox role instead.
+
+    *   **Type:** WCAG
+
+    *   **Success Criteria:** 4.1.2 Name, Role, Value
+
 *   The accessible description is included in the accessibility tree.
 
     *   **Type:** WCAG

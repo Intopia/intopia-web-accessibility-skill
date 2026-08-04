@@ -26,6 +26,12 @@ In addition to the Interactive Control acceptance criteria, the following accept
 
 #### **Semantic markup**
 
+*   The button has the button role in the accessibility tree.
+
+    *   **Type:** WCAG
+
+    *   **Success Criteria:** 4.1.2 Name, Role, Value.
+
 *   If the button is disabled, the button's disabled state is included in the accessibility tree.
 
     *   **Type:** WCAG

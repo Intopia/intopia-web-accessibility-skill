@@ -56,6 +56,12 @@ In addition to the Interactive Control acceptance criteria, the following accept
 
 ### **Semantic markup**
 
+*   Each radio button has the radio role in the accessibility tree.
+
+    *   **Type:** WCAG
+
+    *   **Success Criteria:** 4.1.2 Name, Role, Value
+
 *   The radio buttons are grouped programmatically, and the group role is included in the accessibility tree.
 
     *   **Type:** WCAG

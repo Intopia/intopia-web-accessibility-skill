@@ -22,6 +22,12 @@ In addition to the Interactive Control acceptance criteria, the following accept
 
 ### **Semantic markup**
 
+*   The link has the link role in the accessibility tree.
+
+    *   **Type:** WCAG
+
+    *   **Success Criteria:** 4.1.2 Name, Role, Value
+
 *   When the current state is communicated visually, then the state is included in the accessibility tree.
 
     *   **Type:** WCAG

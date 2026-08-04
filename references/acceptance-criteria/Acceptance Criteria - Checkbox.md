@@ -48,6 +48,12 @@ In addition to the Interactive Control acceptance criteria, the following accept
 
 ### **Semantic markup**
 
+*   The checkbox has the checkbox role in the accessibility tree.
+
+    *   **Type:** WCAG
+
+    *   **Success Criteria:** 4.1.2 Name, Role, Value
+
 *   The checkbox's checked and not checked state is included in the accessibility tree.
 
     *   **Type:** WCAG

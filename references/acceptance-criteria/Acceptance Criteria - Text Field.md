@@ -46,6 +46,12 @@ In addition to the Interactive Control acceptance criteria, the following accept
 
 ### Semantic markup
 
+*   The text field has the textbox role in the accessibility tree.
+
+    *   **Type:** WCAG
+
+    *   **Success Criteria:** 4.1.2 Name, Role, Value
+
 *   The text field’s value is included in the accessibility tree.
 
     *   **Type:** WCAG

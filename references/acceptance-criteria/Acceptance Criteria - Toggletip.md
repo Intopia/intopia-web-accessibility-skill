@@ -2,7 +2,7 @@
 title: "Acceptance Criteria: Toggletip"
 metadata:
   author: Intopia
-  version: "1.0"
+  version: "1.1"
 ---
 A toggletip is a button with an associated pop-up of short content that shows when you activate the button.
 

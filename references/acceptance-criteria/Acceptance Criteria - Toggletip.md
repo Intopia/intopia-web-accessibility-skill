@@ -47,11 +47,11 @@ A toggletip is a button with an associated pop-up of short content that shows wh
 
 ### Keyboard
                 
-*   When the toggletip button has focus and the toggletip content is expanded, the content can be collapsed by pressing the Escape key.
+*   When the toggletip content is expanded, the content can be collapsed by pressing the Escape key.
 
     *   **Type:** Best Practice
 
-*   When an interactive element in the toggletip content has focus, the content can be collapsed by pressing the Escape key, and focus returns to the toggletip button.
+*   When the content is collapsed by pressing the Escape key focus returns to the toggletip button.
 
     *   **Type:** WCAG
 
@@ -61,7 +61,7 @@ A toggletip is a button with an associated pop-up of short content that shows wh
     
     *   **Type:** Best Practice
         
-*   When the toggletip button is activated, focus stays on the toggletip button.
+*   When the toggletip button is activated, focus stays on the button.
     
     *   **Type:** WCAG
         
@@ -72,28 +72,22 @@ A toggletip is a button with an associated pop-up of short content that shows wh
 *   The toggletip content appears visually when the button is activated.
     
     *   **Type:** Best Practice
-    
-*   Icons (for example, the toggletip button icon) have a minimum contrast ratio of 3:1 against the background colour.
-    
-    *   **Type:** WCAG
-        
-    *   **Success Criteria:** 1.4.11 Non-text Contrast
-        
+
 ### Adaptive UI
 
-*   Text within the toggletip component can be increased up to 200% without being truncated, overlapping other text, or being cut off.
+*   Text within the toggletip content can be increased up to 200% without being truncated, overlapping other text, or being cut off.
     
     *   **Type:** WCAG
         
     *   **Success Criteria:** 1.4.4 Resize Text
         
-*   The toggletip component can be viewed at smaller screen widths (320px) without loss of content or functionality, and without requiring horizontal scrolling.
+*   The toggletip content can be viewed at smaller screen widths (320px) without loss of content or functionality, and without requiring horizontal scrolling.
     
     *   **Type:** WCAG
         
     *   **Success Criteria:** 1.4.10 Reflow
         
-*   Text spacing within the toggletip component can be increased without text overlapping, truncating, or being cut off. See 1.4.12 Text Spacing for exact requirements.
+*   Text spacing within the toggletip content can be increased without text overlapping, truncating, or being cut off. See 1.4.12 Text Spacing for exact requirements.
     
     *   **Type:** WCAG
         

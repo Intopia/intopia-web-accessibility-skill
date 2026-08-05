@@ -25,6 +25,12 @@ A tooltip is a small pop-up that shows extra information. The tooltip is only sh
     *   **Type:** WCAG
         
     *   **Success Criteria:** 1.3.1 Info and Relationships
+
+*   The tooltip content is programmatically associated with its trigger using aria-describedby.
+    
+    *   **Type:** WCAG
+
+    *   **Success Criteria:** 1.3.1 Info and Relationships
         
 ### Keyboard
 

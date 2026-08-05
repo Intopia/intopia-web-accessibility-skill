@@ -27,7 +27,9 @@ Per-component references live in `references/`. A dash (—) means no file exist
 | Tabs | `references/acceptance-criteria/Acceptance Criteria - Tabs.md` | — |
 | Text Field | `references/acceptance-criteria/Acceptance Criteria - Text Field.md` | `references/code-example/Code example - Text Field.md` |
 | Toggletip | `references/acceptance-criteria/Acceptance Criteria - Toggletip.md` | — |
-| Tooltip | `references/acceptance-criteria/Acceptance Criteria - Tooltip.md` | — |
+| Tooltip *(extends an interactive element)* | `references/acceptance-criteria/Acceptance Criteria - Tooltip.md` | — |
+
+Tooltip builds on the trigger interactive element it is added to. It only lists the additional criteria for the Tooltip content.
 
 ## Topic Index
 

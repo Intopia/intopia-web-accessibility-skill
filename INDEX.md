@@ -6,8 +6,11 @@ Locate the relevant files before generating code: match each UI component agains
 
 Per-component references live in `references/`. A dash (—) means no file exists for that component in that category; fall back to the applicable topic file and the Universal Rules in `SKILL.md`.
 
+**Shared base for interactive controls.** The seven atomic controls (Button, Link, Checkbox, Checkbox Group, Radio Group, Select, Text Field) share a common set of acceptance criteria held in `references/acceptance-criteria/Acceptance Criteria - Interactive Control.md`. Each of those seven files lists only its own unique criteria and points back to the base. **Load-once rule:** if the request includes one or more of these controls, load the Interactive Control base file **once**, then load each identified control's own file for its deltas. Do not re-load the base per control.
+
 | Component | Acceptance Criteria | Code Example |
 |---|---|---|
+| Interactive Control (shared base for the 7 controls below) | `references/acceptance-criteria/Acceptance Criteria - Interactive Control.md` | — |
 | Accordion | `references/acceptance-criteria/Acceptance Criteria - Accordion.md` | — |
 | Button | `references/acceptance-criteria/Acceptance Criteria - Button.md` | `references/code-example/Code example - Button.md` |
 | Checkbox | `references/acceptance-criteria/Acceptance Criteria - Checkbox.md` | — |

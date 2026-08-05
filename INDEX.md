@@ -27,8 +27,10 @@ Per-component references live in `references/`. A dash (—) means no file exist
 | Table | `references/acceptance-criteria/Acceptance Criteria - Table.md` | `references/code-example/Code example - Table.md` |
 | Tabs | `references/acceptance-criteria/Acceptance Criteria - Tabs.md` | — |
 | Text Field | `references/acceptance-criteria/Acceptance Criteria - Text Field.md` | `references/code-example/Code example - Text Field.md` |
-| Toggletip | `references/acceptance-criteria/Acceptance Criteria - Toggletip.md` | — |
+| Toggletip *(extends Disclosure)* | `references/acceptance-criteria/Acceptance Criteria - Toggletip.md` | — |
 | Tooltip | `references/acceptance-criteria/Acceptance Criteria - Tooltip.md` | — |
+
+Toggletip builds on the Disclosure pattern — load both AC files together; Toggletip's file lists only its additional, toggletip-specific criteria.
 
 ## Topic Index
 

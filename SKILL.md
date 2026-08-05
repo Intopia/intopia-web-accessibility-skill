@@ -4,7 +4,7 @@ description: Build accessible web user interfaces that meet WCAG 2.2 Level AA. U
 user-invocable: true
 metadata:
   author: Intopia
-  version: "2.1"
+  version: "2.2"
 ---
 
 ## Overview
@@ -14,7 +14,7 @@ Apply these accessibility principles whenever generating or modifying UI code. T
 ## Instructions
 
 1. Identify each UI component **and which cross-cutting topics** the user's request touches (forms, keyboard/focus, images/charts, drag and drop, live regions, responsive layout, structure/semantics, colour).
-2. Read `INDEX.md`. For every component identified, load the linked acceptance criteria file (and code example file, if one exists). For every applicable topic, load its file from `references/topic/` via the **Topic Index**. These are authoritative - do not generate code without consulting them.
+2. Read `INDEX.md`. For every component identified, load the linked acceptance criteria file (and code example file, if one exists). If any atomic interactive control (Button, Link, Checkbox, Checkbox Group, Radio Group, Select, Text Field) is identified, load `Acceptance Criteria - Interactive Control.md` **once** for the shared base, then load each identified control's own file for its deltas. For every applicable topic, load its file from `references/topic/` via the **Topic Index**. These are authoritative - do not generate code without consulting them.
 3. If colour values are involved, consult `references/colour-contrast/Colour Contrast Reference.md`.
 4. Apply the Universal Rules below to fill any gaps not covered by the component or topic references.
 5. Generate the code.

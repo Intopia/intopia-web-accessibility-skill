@@ -8,7 +8,7 @@ Per-component references live in `references/`. A dash (—) means no file exist
 
 | Component | Acceptance Criteria | Code Example |
 |---|---|---|
-| Accordion | `references/acceptance-criteria/Acceptance Criteria - Accordion.md` | — |
+| Accordion *(extends Disclosure)* | `references/acceptance-criteria/Acceptance Criteria - Accordion.md` | — |
 | Button | `references/acceptance-criteria/Acceptance Criteria - Button.md` | `references/code-example/Code example - Button.md` |
 | Checkbox | `references/acceptance-criteria/Acceptance Criteria - Checkbox.md` | — |
 | Checkbox Group | `references/acceptance-criteria/Acceptance Criteria - Checkbox Group.md` | — |
@@ -30,7 +30,7 @@ Per-component references live in `references/`. A dash (—) means no file exist
 | Toggletip *(extends Disclosure)* | `references/acceptance-criteria/Acceptance Criteria - Toggletip.md` | — |
 | Tooltip | `references/acceptance-criteria/Acceptance Criteria - Tooltip.md` | — |
 
-Toggletip builds on the Disclosure pattern — load both AC files together; Toggletip's file lists only its additional, toggletip-specific criteria.
+Accordion and Toggletip both build on the Disclosure pattern — load the Disclosure AC file together with theirs; each file lists only its own additional criteria.
 
 ## Topic Index
 

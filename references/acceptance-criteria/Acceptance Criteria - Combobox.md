@@ -4,19 +4,19 @@ metadata:
   author: Intopia
   version: "1.0"
 ---
-A combobox is an input field combined with a popup list of suggestions. Users set its value by typing, by choosing a suggestion from the popup, or both.
+A combobox is an input field combined with a listbox list of options. People set its value by typing, by choosing an option from the listbox, or both.
 
-These criteria apply to every editable, single-select combobox, written for the common case of a listbox popup. Pick the variant below and apply this file together with the variant's file; the grid popup and date picker variants state which popup criteria they replace.
+These criteria apply to every editable, single-select combobox, written for the common case of a listbox. Pick the variant below and apply this file together with the variant's file; the grid popup and date picker variants state which listbox criteria they replace.
 
-For a select-only combobox (users cannot type; the value comes only from the list), see Acceptance Criteria: Select.
+For a select-only combobox (no text entry, but type-ahead moves focus to the first option starting with the typed character), see Acceptance Criteria: Select
 
 ### **Choosing a variant**
 
-**Autocomplete behaviour** (how suggestions respond to typing):
+**Autocomplete behaviour** (how options respond to typing):
 
 | Variant | Use when |
 | :------ | :------- |
-| Combobox (no autocomplete) | Suggestions are independent of the typed text: recent searches, popular picks, a fixed shortlist. |
+| Combobox (no autocomplete) | Options are independent of the typed text: recent searches, popular picks, a fixed shortlist. |
 | Combobox (list autocomplete) | **Default.** Typing filters the list; nothing commits until the user chooses. Its "With automatic selection" section covers committing the top match on blur, for example airport codes. |
 | Combobox (list and inline autocomplete) | Power-user speed with predictable values, such as browser-style URL completion. The most complex variant. |
 
@@ -24,7 +24,7 @@ For a select-only combobox (users cannot type; the value comes only from the lis
 
 | Popup | Add |
 | :---- | :-- |
-| Grid of suggestions, where each needs extra columns such as a name plus a category | Combobox (grid popup), on top of list autocomplete |
+| Grid of options, where each needs extra columns such as a name plus a category | Combobox (grid popup), on top of list autocomplete |
 | Calendar dialog for a date | Combobox (date picker), plus Modal Dialog |
 
 ### **Labels and messaging**
@@ -35,13 +35,13 @@ For a select-only combobox (users cannot type; the value comes only from the lis
 
     *   **Success Criteria:** 3.3.2 Labels or Instructions
 
-*   The combobox's label describes the purpose of the combobox.
+*   The combobox's label describes the choice being made.
 
     *   **Type:** WCAG
 
     *   **Success Criteria:** 2.4.6 Headings and Labels
 
-*   The combobox has a description that helps people enter or choose the right value, such as whether they can type their own value or must pick from the list.
+*   If the combobox requires text in a specific format, instructions describing that format are provided in text.
 
     *   **Type:** WCAG
 
@@ -75,7 +75,7 @@ For a select-only combobox (users cannot type; the value comes only from the lis
 
 ### **Semantic markup**
 
-*   The combobox's role (combobox) is included in the accessibility tree.
+*   The combobox has the combobox role in the accessibility tree.
 
     *   **Type:** WCAG
 
@@ -87,67 +87,63 @@ For a select-only combobox (users cannot type; the value comes only from the lis
 
     *   **Success Criteria:** 4.1.2 Name, Role, Value
 
-*   The combobox's accessible name includes the exact text from its visible label.
-
-    *   **Type:** WCAG
-
-    *   **Success Criteria:** 2.5.3 Label in Name
-
 *   The combobox's value is included in the accessibility tree.
 
     *   **Type:** WCAG
 
     *   **Success Criteria:** 4.1.2 Name, Role, Value
 
-*   The combobox's expanded or collapsed state is included in the accessibility tree (aria-expanded).
+*   The combobox's expanded or collapsed state is included in the accessibility tree.
 
     *   **Type:** WCAG
 
     *   **Success Criteria:** 4.1.2 Name, Role, Value
 
-*   The popup's role (listbox) is included in the accessibility tree.
+*   If instructions are provided, they are exposed as the combobox's accessible description in the accessibility tree.
+
+    *   **Type:** WCAG
+
+    *   **Success Criteria:** 1.3.1 Info and Relationships
+
+*   The list of options has the listbox role in the accessibility tree.
 
     *   **Type:** WCAG
 
     *   **Success Criteria:** 4.1.2 Name, Role, Value
 
-*   Each suggestion's role (option) is included in the accessibility tree.
+*   Each option has the option role in the accessibility tree.
 
     *   **Type:** WCAG
 
     *   **Success Criteria:** 4.1.2 Name, Role, Value
 
-*   Each suggestion's accessible name is included in the accessibility tree.
+*   Each option's accessible name is included in the accessibility tree.
 
     *   **Type:** WCAG
 
     *   **Success Criteria:** 4.1.2 Name, Role, Value
 
-*   The suggestion that has visual focus is programmatically determinable (via aria-activedescendant on the combobox, or DOM focus on the option).
+*   The option that has visual focus is programmatically determinable (via aria-activedescendant on the combobox).
+
+    *   **Type:** WCAG
+
+    *   **Success Criteria:** 1.3.1 Info and Relationships
+
+*   The selected option's state is included in the accessibility tree.
 
     *   **Type:** WCAG
 
     *   **Success Criteria:** 4.1.2 Name, Role, Value
 
-*   The selected suggestion's state is included in the accessibility tree (aria-selected).
-
-    *   **Type:** WCAG
-
-    *   **Success Criteria:** 4.1.2 Name, Role, Value
-
-*   The combobox is programmatically associated with its popup (aria-controls).
+*   The combobox is programmatically associated with its listbox.
 
     *   **Type:** Best practice
 
 *   The combobox indicates its autocomplete behaviour (aria-autocomplete set to none, list or both, matching the actual behaviour).
 
-    *   **Type:** Best practice
-
-*   The accessible description is included in the accessibility tree.
-
     *   **Type:** WCAG
 
-    *   **Success Criteria:** 1.3.1 Info and Relationships
+    *   **Success Criteria:** 4.1.2 Name, Role, Value
 
 *   The required state is included in the accessibility tree.
 
@@ -181,33 +177,33 @@ For a select-only combobox (users cannot type; the value comes only from the lis
 
     *   **Success Criteria:** 2.1.1 Keyboard
 
-*   People can open the popup and choose a suggestion using only a keyboard.
+*   People can open the listbox and choose an option using only a keyboard.
 
     *   **Type:** WCAG
 
     *   **Success Criteria:** 2.1.1 Keyboard
 
-*   Pressing the Down arrow key opens the popup and moves visual focus to the first suggestion. Pressing the Up arrow key opens the popup and moves visual focus to the last suggestion.
+*   Pressing the Down arrow key opens the listbox and moves visual focus to the first option.
 
     *   **Type:** Best practice
 
-*   Pressing the up and down arrow keys when the popup is open moves visual focus through the suggestions.
+*   Pressing the up and down arrow keys when the listbox is open moves visual focus through the options.
 
     *   **Type:** Best practice
 
-*   While navigating suggestions, people can return to the text and keep editing without losing their typed value (DOM focus stays on the input; arrow keys move only the visual focus).
+*   While navigating options, people can return to the text and keep editing without losing their typed value (DOM focus stays on the input; arrow keys move only the visual focus).
 
     *   **Type:** Best practice
 
-*   Pressing the Enter key when a suggestion has visual focus sets the combobox's value to that suggestion and closes the popup.
+*   Pressing the Enter key when an option has visual focus sets the combobox's value to that option and closes the listbox.
 
     *   **Type:** Best practice
 
-*   Pressing the Escape key when the popup is open closes the popup without changing the combobox's value.
+*   Pressing the Escape key when the listbox is open closes the listbox without changing the combobox's value.
 
     *   **Type:** Best practice
 
-*   Pressing the Tab key to move away from the combobox closes the popup.
+*   Pressing the Tab key to move away from the combobox closes the listbox.
 
     *   **Type:** Best practice
 
@@ -221,25 +217,25 @@ For a select-only combobox (users cannot type; the value comes only from the lis
 
     *   **Success Criteria:** 3.2.1 On Focus
 
-*   Typing into the combobox or choosing a suggestion does not trigger an unexpected change in context.
+*   Typing into the combobox or choosing an option does not trigger an unexpected change in context.
 
     *   **Type:** WCAG
 
     *   **Success Criteria:** 3.2.2 On Input
 
-*   The combobox has a clear focus style when it receives focus using a keyboard.
+*   The combobox has a focus style when it receives focus using a keyboard.
 
     *   **Type:** WCAG
 
     *   **Success Criteria:** 2.4.7 Focus Visible
 
-*   The suggestion with visual focus has a clear focus style.
+*   The option with visual focus has a focus style.
 
     *   **Type:** WCAG
 
     *   **Success Criteria:** 2.4.7 Focus Visible
 
-*   The suggestion with visual focus is scrolled into view (browsers do not scroll aria-activedescendant targets automatically, so script must do it; this matters for people using browser zoom).
+*   The option with visual focus is scrolled into view.
 
     *   **Type:** Best practice
 
@@ -251,7 +247,7 @@ For a select-only combobox (users cannot type; the value comes only from the lis
 
 ### **Visual design**
 
-*   If the combobox or the suggestions use a custom focus style, then the focus style has a contrast ratio of 3:1 against the background colours.
+*   If the combobox or the options use a custom focus style, then the focus style has a contrast ratio of 3:1 against the background colours.
 
     *   **Type:** WCAG
 
@@ -263,13 +259,13 @@ For a select-only combobox (users cannot type; the value comes only from the lis
 
     *   **Success Criteria:** 1.4.11 Non-text Contrast
 
-*   All text meets the minimum contrast ratio of 4.5:1 against the background colours, or 3:1 for large-scale text (24px or 18.5px and bold). This applies to the typed value, the label, the description, the error message and the suggestions in all states (default, focus, hover, error). Note, if the combobox is disabled it does not need to meet contrast requirements.
+*   All text meets the minimum contrast ratio of 4.5:1 against the background colours, or 3:1 for large-scale text (24px or 18.5px and bold). This applies to the typed value, the label, the description, the error message and the options in all states (default, focus, hover, error). Note, if the combobox is disabled it does not need to meet contrast requirements.
 
     *   **Type:** WCAG
 
     *   **Success Criteria:** 1.4.3 Contrast (Minimum)
 
-*   The suggestion with visual focus is identified by more than colour alone, for example a border or background change with sufficient contrast.
+*   The option with visual focus is identified by more than colour alone, for example a border or background change with sufficient contrast.
 
     *   **Type:** WCAG
 
@@ -277,7 +273,7 @@ For a select-only combobox (users cannot type; the value comes only from the lis
 
 ### **Adaptive UI**
 
-*   The combobox and its popup can be viewed at smaller screen widths (320px) without loss of content or functionality. The user does not have to scroll horizontally to use it.
+*   The combobox and its listbox can be viewed at smaller screen widths (320px) without loss of content or functionality. The user does not have to scroll horizontally to use it.
 
     *   **Type:** WCAG
 

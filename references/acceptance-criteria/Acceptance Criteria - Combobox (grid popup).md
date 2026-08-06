@@ -34,11 +34,11 @@ In addition to acceptance criteria for combobox and combobox (list autocomplete)
 
 ### **Keyboard**
 
-*   Pressing the up and down arrow keys moves visual focus between suggestion rows, wrapping from last to first and first to last.
+*   Pressing the up and down arrow keys moves visual focus between suggestion rows. When focus is on the first or last row, focus does not move.
 
     *   **Type:** Best practice
 
-*   Pressing the left and right arrow keys moves visual focus between the cells of a suggestion, wrapping across rows and across the whole grid.
+*   Pressing the left and right arrow keys moves visual focus between the cells of a suggestion. When focus is on the first or last cell of a row, focus does not move.
 
     *   **Type:** Best practice
 

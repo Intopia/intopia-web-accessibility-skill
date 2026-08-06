@@ -31,6 +31,10 @@ A tooltip is a small pop-up that shows extra information. The tooltip is only sh
     *   **Type:** WCAG
 
     *   **Success Criteria:** 1.3.1 Info and Relationships
+
+*   The tooltip content does not contain interactive elements (for example, links, buttons, or form fields). A role of tooltip is not reachable by screen reader browse or navigation commands, so any interactive content inside it is effectively inaccessible. If interactive content is needed, use the Toggletip pattern (`references/acceptance-criteria/Acceptance Criteria - Toggletip.md`) instead.
+
+    *   **Type:** Best Practice
         
 ### Keyboard
 
@@ -56,6 +60,12 @@ A tooltip is a small pop-up that shows extra information. The tooltip is only sh
 
 *   The tooltip content remains visible when the mouse cursor moves from the trigger to the tooltip content itself.
     
+    *   **Type:** WCAG
+        
+    *   **Success Criteria:** 1.4.13 Content on Hover or Focus
+
+*   The tooltip content remains visible until the trigger loses hover or focus, the user dismisses it, or the information it contains becomes invalid. It does not disappear automatically after a fixed time while the trigger still has hover or focus.
+
     *   **Type:** WCAG
         
     *   **Success Criteria:** 1.4.13 Content on Hover or Focus

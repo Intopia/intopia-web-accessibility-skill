@@ -4,7 +4,7 @@ metadata:
   author: Intopia
   version: "1.0"
 ---
-A combobox is an input field combined with a listbox list of options. People set its value by typing, by choosing an option from the listbox, or both.
+A combobox is an input field combined with a list of options. People set its value by typing, by choosing an option from the listbox, or both.
 
 These criteria apply to every editable, single-select combobox, written for the common case of a listbox. Pick the variant below and apply this file together with the variant's file; the grid popup and date picker variants state which listbox criteria they replace.
 
@@ -41,7 +41,7 @@ For a select-only combobox (no text entry, but type-ahead moves focus to the fir
 
     *   **Success Criteria:** 2.4.6 Headings and Labels
 
-*   If the combobox requires text in a specific format, instructions describing that format are provided in text.
+*   If the combobox requires text in a specific format, instructions are provided.
 
     *   **Type:** WCAG
 
@@ -238,12 +238,6 @@ For a select-only combobox (no text entry, but type-ahead moves focus to the fir
 *   The option with visual focus is scrolled into view.
 
     *   **Type:** Best practice
-
-*   When the combobox receives focus using a keyboard, the combobox is not completely hidden by other content, such as a popup menu or tooltip.
-
-    *   **Type:** WCAG
-
-    *   **Success Criteria:** 2.4.11 Focus Not Obscured (Minimum)
 
 ### **Visual design**
 

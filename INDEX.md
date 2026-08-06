@@ -6,13 +6,18 @@ Locate the relevant files before generating code: match each UI component agains
 
 Per-component references live in `references/`. A dash (—) means no file exists for that component in that category; fall back to the applicable topic file and the Universal Rules in `SKILL.md`.
 
+**Shared base for interactive controls.** The seven atomic controls (Button, Link, Checkbox, Checkbox Group, Radio Group, Select, Text Field) share a common set of acceptance criteria held in `references/acceptance-criteria/Acceptance Criteria - Interactive Control.md`. Each of those seven files lists only its own unique criteria and points back to the base. **Load-once rule:** if the request includes one or more of these controls, load the Interactive Control base file **once**, then load each identified control's own file for its deltas. Do not re-load the base per control.
+
 | Component | Acceptance Criteria | Code Example |
 |---|---|---|
+| Accordion *(extends Disclosure)* | `references/acceptance-criteria/Acceptance Criteria - Accordion.md` | — |
+| Interactive Control (shared base for the 7 controls below) | `references/acceptance-criteria/Acceptance Criteria - Interactive Control.md` | — |
 | Accordion | `references/acceptance-criteria/Acceptance Criteria - Accordion.md` | — |
 | Button | `references/acceptance-criteria/Acceptance Criteria - Button.md` | `references/code-example/Code example - Button.md` |
 | Checkbox | `references/acceptance-criteria/Acceptance Criteria - Checkbox.md` | — |
 | Checkbox Group | `references/acceptance-criteria/Acceptance Criteria - Checkbox Group.md` | — |
 | Complex Image (diagram, graph, infographic) | `references/acceptance-criteria/Acceptance Criteria - Complex Image (e.g. diagram, graph, infographic).md` | `references/code-example/Code example - Complex Image (e.g. diagram, graph, infographic).md` |
+| Disclosure | `references/acceptance-criteria/Acceptance Criteria - Disclosure.md` | `references/code-example/Code example - Disclosure.md` |
 | Heading | `references/acceptance-criteria/Acceptance Criteria - Heading.md` | `references/code-example/Code example - Heading.md` |
 | Image | `references/acceptance-criteria/Acceptance Criteria - Image.md` | `references/code-example/Code example - Image.md` |
 | Landmark | `references/acceptance-criteria/Acceptance Criteria - Landmark.md` | `references/code-example/Code example - Landmark.md` |
@@ -26,10 +31,11 @@ Per-component references live in `references/`. A dash (—) means no file exist
 | Table | `references/acceptance-criteria/Acceptance Criteria - Table.md` | `references/code-example/Code example - Table.md` |
 | Tabs | `references/acceptance-criteria/Acceptance Criteria - Tabs.md` | — |
 | Text Field | `references/acceptance-criteria/Acceptance Criteria - Text Field.md` | `references/code-example/Code example - Text Field.md` |
-| Toggletip | `references/acceptance-criteria/Acceptance Criteria - Toggletip.md` | — |
-| Tooltip *(extends an interactive element)* | `references/acceptance-criteria/Acceptance Criteria - Tooltip.md` | — |
+| Toggletip *(extends Disclosure)* | `references/acceptance-criteria/Acceptance Criteria - Toggletip.md` | — |
+| Tooltip | `references/acceptance-criteria/Acceptance Criteria - Tooltip.md` | — |
 
-Tooltip builds on the trigger interactive element it is added to. It only lists the additional criteria for the Tooltip content.
+- Accordion and Toggletip both build on the Disclosure pattern — load the Disclosure AC file together with theirs; each file lists only its own additional criteria.
+- Tooltip builds on the trigger interactive element it is added to. It only lists the additional criteria for the Tooltip content.
 
 ## Topic Index
 

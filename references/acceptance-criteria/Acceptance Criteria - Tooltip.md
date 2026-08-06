@@ -16,7 +16,7 @@ The trigger control's own acceptance criteria (from its control type, such as Bu
         
     *   **Success Criteria:** 4.1.2 Name, Role, Value
 
-*   The tooltip content's role of tooltip is included in the accessibility tree.
+*   The tooltip's content has the tooltip role in the accessibility tree.
     
     *   **Type:** WCAG
         

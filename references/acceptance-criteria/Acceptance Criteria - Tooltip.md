@@ -6,6 +6,8 @@ metadata:
 ---
 A tooltip is a small pop-up that shows extra information. The tooltip is only shown when you hover over a trigger interactive control or focus on the trigger using your keyboard. The tooltip is supporting content: the interactive control has its own function, separate from showing the tooltip.
 
+The trigger control's own acceptance criteria (from its control type, such as Button or Link, which already include the Interactive Control acceptance criteria) continue to apply in full. The following acceptance criteria apply in addition, specific to the tooltip content itself.
+
 ### Semantic markup
 
 *   The tooltip content's accessible name is included in the accessibility tree.

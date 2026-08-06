@@ -253,12 +253,6 @@ For a select-only combobox (no text entry, but type-ahead moves focus to the fir
 
     *   **Success Criteria:** 1.4.11 Non-text Contrast
 
-*   All text meets the minimum contrast ratio of 4.5:1 against the background colours, or 3:1 for large-scale text (24px or 18.5px and bold). This applies to the typed value, the label, the description, the error message and the options in all states (default, focus, hover, error). Note, if the combobox is disabled it does not need to meet contrast requirements.
-
-    *   **Type:** WCAG
-
-    *   **Success Criteria:** 1.4.3 Contrast (Minimum)
-
 *   The option with visual focus is identified by more than colour alone, for example a border or background change with sufficient contrast.
 
     *   **Type:** WCAG
@@ -272,15 +266,3 @@ For a select-only combobox (no text entry, but type-ahead moves focus to the fir
     *   **Type:** WCAG
 
     *   **Success Criteria:** 1.4.10 Reflow
-
-*   Text can be increased up to 200% without text overlapping, truncating or being cut off.
-
-    *   **Type:** WCAG
-
-    *   **Success Criteria:** 1.4.4 Resize Text
-
-*   Text spacing can be increased without text overlapping, truncating or being cut off. See 1.4.12 Text Spacing for exact requirements.
-
-    *   **Type:** WCAG
-
-    *   **Success Criteria:** 1.4.12 Text Spacing

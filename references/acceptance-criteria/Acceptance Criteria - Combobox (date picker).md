@@ -20,11 +20,15 @@ In addition to acceptance criteria for combobox and modal dialog, the following 
 
 *   The combobox indicates that its popup is a dialog (aria-haspopup="dialog").
 
-    *   **Type:** Best practice
+    *   **Type:** WCAG
+
+    *   **Success Criteria:** 1.3.1 Info and Relationships
 
 *   The combobox indicates that typing does not filter suggestions (aria-autocomplete="none", or the attribute omitted, which is equivalent).
 
-    *   **Type:** Best practice
+    *   **Type:** WCAG
+    
+    *   **Success Criteria:** 4.1.2 Name, Role, Value
 
 *   The date format hint is the combobox's accessible description and included in the accessibility tree.
 
@@ -32,7 +36,7 @@ In addition to acceptance criteria for combobox and modal dialog, the following 
 
     *   **Success Criteria:** 1.3.1 Info and Relationships
 
-*   The calendar's role (grid) is included in the accessibility tree.
+*   The calendar has the grid role in the accessibility tree.
 
     *   **Type:** WCAG
 
@@ -50,13 +54,13 @@ In addition to acceptance criteria for combobox and modal dialog, the following 
 
     *   **Success Criteria:** 1.3.1 Info and Relationships
 
-*   The selected date's state is included in the accessibility tree (aria-selected).
+*   The selected date's state is included in the accessibility tree.
 
     *   **Type:** WCAG
 
     *   **Success Criteria:** 4.1.2 Name, Role, Value
 
-*   The month and year navigation buttons have accessible names included in the accessibility tree, for example "Next month".
+*   The month and year navigation buttons have accessible names included in the accessibility tree.
 
     *   **Type:** WCAG
 

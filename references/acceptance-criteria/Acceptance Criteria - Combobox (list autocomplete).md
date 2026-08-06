@@ -26,7 +26,9 @@ In addition to acceptance criteria for combobox, the following acceptance criter
 
 *   The combobox indicates that suggestions are filtered by the typed text (aria-autocomplete="list").
 
-    *   **Type:** Best practice
+    *   **Type:** WCAG
+
+    *   **Success Criteria:** 4.1.2 Name, Role, Value
 
 ### **Keyboard**
 

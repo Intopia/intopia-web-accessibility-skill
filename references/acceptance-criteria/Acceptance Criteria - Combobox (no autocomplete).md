@@ -18,4 +18,6 @@ In addition to acceptance criteria for combobox, the following acceptance criter
 
 *   The combobox indicates that suggestions are not related to the typed text (aria-autocomplete="none", or the attribute omitted, which is equivalent).
 
-    *   **Type:** Best practice
+    *   **Type:** WCAG
+
+    *   **Success Criteria:** 4.1.2 Name, Role, Value

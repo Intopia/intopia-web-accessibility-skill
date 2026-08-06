@@ -59,29 +59,11 @@ A tooltip is a small pop-up that shows extra information. The tooltip is only sh
     *   **Type:** WCAG
         
     *   **Success Criteria:** 1.4.13 Content on Hover or Focus
-        
-*   All text within the tooltip content meets the minimum contrast ratio of 4.5:1 against the background colour, or 3:1 for large-scale text (24px or 18.5px and bold).
-    
-    *   **Type:** WCAG
-        
-    *   **Success Criteria:** 1.4.3 Contrast (Minimum)
 
 ### Adaptive UI
-
-*   Text within the tooltip content can be increased up to 200% without being truncated, overlapping other text, or being cut off.
     
-    *   **Type:** WCAG
-        
-    *   **Success Criteria:** 1.4.4 Resize Text
-        
 *   The tooltip content can be viewed at smaller screen widths (320px) without loss of content or functionality, and without requiring horizontal scrolling.
     
     *   **Type:** WCAG
         
     *   **Success Criteria:** 1.4.10 Reflow
-        
-*   Text spacing within the tooltip content can be increased without text overlapping, truncating, or being cut off. See 1.4.12 Text Spacing for exact requirements.
-    
-    *   **Type:** WCAG
-        
-    *   **Success Criteria:** 1.4.12 Text Spacing

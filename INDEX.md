@@ -9,7 +9,7 @@ Per-component references live in `references/`. A dash (—) means no file exist
 **Shared base for interactive controls.** The seven atomic controls (Button, Link, Checkbox, Checkbox Group, Radio Group, Select, Text Field) share a common set of acceptance criteria held in `references/acceptance-criteria/Acceptance Criteria - Interactive Control.md`. Each of those seven files lists only its own unique criteria and points back to the base. **Load-once rule:** if the request includes one or more of these controls, load the Interactive Control base file **once**, then load each identified control's own file for its deltas. Do not re-load the base per control.
 
 - Accordion and Toggletip both build on the Disclosure pattern — load the Disclosure AC file together with theirs; each file lists only its own additional criteria.
-- Tooltip builds on the trigger interactive element it is added to. It only lists the additional criteria for the Tooltip content.
+- Tooltip builds on the trigger interactive element it is added to. It only lists the additional criteria for the Tooltip content.The tooltip content does not contain interactive elements (for example, links, buttons, or form fields). If interactive content is needed, use the Toggletip pattern (`references/acceptance-criteria/Acceptance Criteria - Toggletip.md`) instead.
 
 | Component | Acceptance Criteria | Code Example |
 |---|---|---|

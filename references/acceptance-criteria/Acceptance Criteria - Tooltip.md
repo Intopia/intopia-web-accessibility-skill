@@ -33,10 +33,6 @@ The trigger control's own acceptance criteria (from its control type, such as Bu
     *   **Type:** WCAG
 
     *   **Success Criteria:** 1.3.1 Info and Relationships
-
-*   The tooltip content does not contain interactive elements (for example, links, buttons, or form fields). A role of tooltip is not reachable by screen reader browse or navigation commands, so any interactive content inside it is effectively inaccessible. If interactive content is needed, use the Toggletip pattern (`references/acceptance-criteria/Acceptance Criteria - Toggletip.md`) instead.
-
-    *   **Type:** Best Practice
         
 ### Keyboard
 

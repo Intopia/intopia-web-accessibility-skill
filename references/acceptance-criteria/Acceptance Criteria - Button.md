@@ -24,6 +24,10 @@ In addition to the Interactive Control acceptance criteria, the following accept
 
     *   **Success Criteria:** 2.4.6 Headings and Labels.
 
+*   If the button uses an icon without visible text, the icon is recognisable, or its purpose is conveyed via a tooltip on hover and focus. See the Tooltip acceptance criteria.
+
+    *   **Type:** Best Practice
+
 #### **Semantic markup**
 
 *   The button has the button role in the accessibility tree.

@@ -4,7 +4,7 @@ metadata:
   author: Intopia
   version: "1.0"
 ---
-A tooltip is a small pop-up that shows extra information. The tooltip is only shown when you hover over a trigger interactive element or focus on the trigger using your keyboard. The tooltip is supporting content: the interactive element has its own function, separate from showing the tooltip.
+A tooltip is a small pop-up that shows extra information. The tooltip is only shown when you hover over a trigger interactive control or focus on the trigger using your keyboard. The tooltip is supporting content: the interactive control has its own function, separate from showing the tooltip.
 
 ### Semantic markup
 
@@ -34,13 +34,13 @@ A tooltip is a small pop-up that shows extra information. The tooltip is only sh
         
 ### Keyboard
 
-*   The tooltip content is visible when the interactive element has focus.
+*   The tooltip content is visible when the interactive control has focus.
     
     *   **Type:** WCAG
         
     *   **Success Criteria:** 2.1.1 Keyboard
 
-*   The tooltip content is visible when the interactive element is hovered over.
+*   The tooltip content is visible when the interactive control is hovered over.
     
     *   **Type:** WCAG
         

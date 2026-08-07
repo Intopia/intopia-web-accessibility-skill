@@ -6,7 +6,11 @@ metadata:
 ---
 A date picker combobox is an editable date input whose popup is a modal dialog containing a calendar grid and buttons for navigating by month and year. People can type the date directly or choose it from the calendar.
 
-In addition to acceptance criteria for combobox and modal dialog, the following acceptance criteria apply. The popup is a modal dialog, not a listbox, so the base criteria for the popup's role (listbox), the suggestions' roles and states (option, aria-selected) and visual focus via aria-activedescendant do not apply; the criteria below replace them. DOM focus moves into the dialog while it is open.
+In addition to the acceptance criteria for combobox:
+
+*   the popup is a modal dialog, so the acceptance criteria for modal dialog apply
+*   the popup is not a listbox, so the base criteria for the popup's role (listbox), the suggestions' roles and states (option, aria-selected) and visual focus via aria-activedescendant do not apply
+*   DOM focus moves into the dialog while it is open.
 
 ### **Labels and messaging**
 
@@ -22,12 +26,12 @@ In addition to acceptance criteria for combobox and modal dialog, the following 
 
     *   **Type:** WCAG
 
-    *   **Success Criteria:** 1.3.1 Info and Relationships
+    *   **Success Criteria:** 4.1.2 Name, Role, Value
 
 *   The combobox indicates that typing does not filter suggestions (aria-autocomplete="none", or the attribute omitted, which is equivalent).
 
     *   **Type:** WCAG
-    
+
     *   **Success Criteria:** 4.1.2 Name, Role, Value
 
 *   The date format hint is the combobox's accessible description and included in the accessibility tree.
@@ -50,9 +54,7 @@ In addition to acceptance criteria for combobox and modal dialog, the following 
 
 *   The day-of-week column headers expose full day names to assistive technology, even when abbreviated visibly (for example "Mo" announced as "Monday").
 
-    *   **Type:** WCAG
-
-    *   **Success Criteria:** 1.3.1 Info and Relationships
+    *   **Type:** Best practice
 
 *   The selected date's state is included in the accessibility tree.
 
@@ -68,9 +70,7 @@ In addition to acceptance criteria for combobox and modal dialog, the following 
 
 *   When the displayed month or year changes, the change is announced to screen reader users without moving focus.
 
-    *   **Type:** WCAG
-
-    *   **Success Criteria:** 4.1.3 Status Messages
+    *   **Type:** Best practice
 
 ### **Keyboard**
 

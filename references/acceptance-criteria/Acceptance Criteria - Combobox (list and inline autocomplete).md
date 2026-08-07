@@ -13,7 +13,7 @@ In addition to acceptance criteria for combobox and combobox (list autocomplete)
 *   The combobox indicates that it provides both list and inline autocomplete (aria-autocomplete="both").
 
     *   **Type:** WCAG
-    
+
     *   **Success Criteria:** 4.1.2 Name, Role, Value
 
 ### **Keyboard**

@@ -10,13 +10,11 @@ In addition to acceptance criteria for combobox, the following acceptance criter
 
 ### **Labels and messaging**
 
-*   When typing changes the available suggestions, the change is announced to screen reader users without moving focus, for example "12 results available".
+*   The combobox displays the number of results found.
 
-    *   **Type:** WCAG
+    *   **Type:** Best practice
 
-    *   **Success Criteria:** 4.1.3 Status Messages
-
-*   When no suggestions match the typed text, this is conveyed to screen reader users without moving focus.
+*   When visible text displays results and typing updates available suggestions, screen readers announce the change without moving focus, for example, "12 results available" or  “No results available”.
 
     *   **Type:** WCAG
 
@@ -36,7 +34,7 @@ In addition to acceptance criteria for combobox, the following acceptance criter
 
     *   **Type:** Best practice
 
-### With automatic selection
+### **With automatic selection**
 
 As above, except the first matching suggestion is highlighted automatically as the person types, and becomes the value if they close the popup without choosing a different one.
 

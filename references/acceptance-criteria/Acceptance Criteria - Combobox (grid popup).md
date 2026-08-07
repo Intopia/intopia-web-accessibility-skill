@@ -14,7 +14,7 @@ In addition to acceptance criteria for combobox and combobox (list autocomplete)
 
     *   **Type:** WCAG
 
-    *   **Success Criteria:** 1.3.1 Info and Relationships
+    *   **Success Criteria:** 4.1.2 Name, Role, Value
 
 *   The popup has the grid role in the accessibility tree.
 

@@ -50,13 +50,13 @@ In addition to the Interactive Control and Button acceptance criteria, the follo
         
     *   **Success Criteria:** 1.3.2 Meaningful Sequence
         
-*   The menu items have the menuitem, menuitemcheckbox, menuitemradio role in the accessibility tree.
+*   The menu items have the menuitem, menuitemcheckbox or menuitemradio role in the accessibility tree.
     
     *   **Type:** WCAG
         
     *   **Success Criteria:** 4.1.2 Name, Role, Value
         
-*   If menuitemcheckbox, menuitemradio role is used, then the checked state via aria-checked is in the accessibility tree.
+*   If menuitemcheckbox or menuitemradio role is used, then the checked state via aria-checked is in the accessibility tree.
     
     *   **Type:** WCAG
         

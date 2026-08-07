@@ -10,20 +10,20 @@ These criteria apply to every editable, single-select combobox, written for the 
 
 For a select-only combobox (no text entry, but type-ahead moves focus to the first option starting with the typed character), see Acceptance Criteria: Select
 
-### **Choosing a variant**
+### Choosing a variant
 
-**Autocomplete behaviour** (how options respond to typing):
+Autocomplete behaviour (how options respond to typing):
 
 | Variant | Use when |
-| :------ | :------- |
+| --- | --- |
 | Combobox (no autocomplete) | Options are independent of the typed text: recent searches, popular picks, a fixed shortlist. |
-| Combobox (list autocomplete) | **Default.** Typing filters the list; nothing commits until the user chooses. Its "With automatic selection" section covers committing the top match on blur, for example airport codes. |
+| Combobox (list autocomplete) | Default. Typing filters the list; nothing commits until the user chooses. Its "With automatic selection" section covers committing the top match on blur, for example airport codes. |
 | Combobox (list and inline autocomplete) | Power-user speed with predictable values, such as browser-style URL completion. The most complex variant. |
 
-**Popup type** (independent of the above): a flat listbox is the default and needs nothing extra.
+Popup type (independent of the above): a flat listbox is the default and needs nothing extra.
 
 | Popup | Add |
-| :---- | :-- |
+| --- | --- |
 | Grid of options, where each needs extra columns such as a name plus a category | Combobox (grid popup), on top of list autocomplete |
 | Calendar dialog for a date | Combobox (date picker), plus Modal Dialog |
 
@@ -49,9 +49,7 @@ For a select-only combobox (no text entry, but type-ahead moves focus to the fir
 
 *   There is a visible way to identify when the combobox is required.
 
-    *   **Type:** WCAG
-
-    *   **Success Criteria:** 3.3.2 Labels or Instructions
+    *   **Type:** Best practice
 
 *   There is a visible way to identify when the combobox is disabled.
 
@@ -69,7 +67,7 @@ For a select-only combobox (no text entry, but type-ahead moves focus to the fir
 
     *   **Success Criteria:** 3.3.3 Error Suggestion
 
-*   The error message is close to the combobox.
+*   The error message is visually close to the combobox.
 
     *   **Type:** Best practice
 
@@ -145,7 +143,7 @@ For a select-only combobox (no text entry, but type-ahead moves focus to the fir
 
     *   **Success Criteria:** 4.1.2 Name, Role, Value
 
-*   The required state is included in the accessibility tree.
+*   If indicated visually, the required state is included in the accessibility tree.
 
     *   **Type:** WCAG
 
@@ -241,7 +239,7 @@ For a select-only combobox (no text entry, but type-ahead moves focus to the fir
 
 ### **Visual design**
 
-*   If the combobox or the options use a custom focus style, then the focus style has a contrast ratio of 3:1 against the background colours.
+*   If the options use a custom focus style, then the focus style has a contrast ratio of 3:1 against the background colours.
 
     *   **Type:** WCAG
 

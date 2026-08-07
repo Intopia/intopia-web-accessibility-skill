@@ -14,7 +14,7 @@ The Previous, Next and slide-picker controls are buttons. In addition to the Int
 
     *   **Type:** Best practice
 
-*   The carousel container has the role description via `aria-roledescription="slide"` in the accessibility tree.
+*   The carousel container has the carousel role description via `aria-roledescription="carousel"` in the accessibility tree.
 
     *   **Type:** Best practice
 
@@ -22,7 +22,7 @@ The Previous, Next and slide-picker controls are buttons. In addition to the Int
 
     *   **Type:** Best practice
 
-*   Each slide is contained in an element with `role="group"`.
+*   Each slide has the group role in the accessibility tree.
 
     *   **Type:** Best practice
 
@@ -42,7 +42,7 @@ The Previous, Next and slide-picker controls are buttons. In addition to the Int
 
     *   **Type:** Best practice
 
-*   If there is visual pagination indicator that shows the updated position in the carousel, then assistive technology announces the new position.
+*   If there is a visual pagination indicator that shows the updated position in the carousel, then assistive technology announces the new position.
 
     *   **Type:** WCAG
 

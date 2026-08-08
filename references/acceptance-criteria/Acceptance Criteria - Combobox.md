@@ -12,20 +12,20 @@ For a select-only combobox (no text entry, but type-ahead moves focus to the fir
 
 ### Choosing a variant
 
-Autocomplete behaviour (how options respond to typing):
+Autocomplete behaviour (how options respond to typing). This base file is already loaded; also load the variant file(s) in the **Load** column, in order:
 
-| Variant | Use when |
-| --- | --- |
-| Combobox (no autocomplete) | Options are independent of the typed text: recent searches, popular picks, a fixed shortlist. |
-| Combobox (list autocomplete) | Default. Typing filters the list; nothing commits until the user chooses. Its "With automatic selection" section covers committing the top match on blur, for example airport codes. |
-| Combobox (list and inline autocomplete) | Power-user speed with predictable values, such as browser-style URL completion. The most complex variant. |
+| Variant | Use when | Load |
+| --- | --- | --- |
+| Combobox (no autocomplete) | Options are independent of the typed text: recent searches, popular picks, a fixed shortlist. | `references/acceptance-criteria/Acceptance Criteria - Combobox (no autocomplete).md` |
+| Combobox (list autocomplete) | Default. Typing filters the list; nothing commits until the user chooses. Its "With automatic selection" section covers committing the top match on blur, for example airport codes. | `references/acceptance-criteria/Acceptance Criteria - Combobox (list autocomplete).md` |
+| Combobox (list and inline autocomplete) | Power-user speed with predictable values, such as browser-style URL completion. The most complex variant. | `references/acceptance-criteria/Acceptance Criteria - Combobox (list autocomplete).md`, then `references/acceptance-criteria/Acceptance Criteria - Combobox (list and inline autocomplete).md` |
 
 Popup type (independent of the above): a flat listbox is the default and needs nothing extra.
 
-| Popup | Add |
+| Popup | Load |
 | --- | --- |
-| Grid of options, where each needs extra columns such as a name plus a category | Combobox (grid popup), on top of list autocomplete |
-| Calendar dialog for a date | Combobox (date picker), plus Modal Dialog |
+| Grid of options, where each needs extra columns such as a name plus a category | `references/acceptance-criteria/Acceptance Criteria - Combobox (list autocomplete).md`, then `references/acceptance-criteria/Acceptance Criteria - Combobox (grid popup).md` |
+| Calendar dialog for a date | `references/acceptance-criteria/Acceptance Criteria - Combobox (date picker).md`, plus `references/acceptance-criteria/Acceptance Criteria - Modal Dialog.md` |
 
 ### **Labels and messaging**
 

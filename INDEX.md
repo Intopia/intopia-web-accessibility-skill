@@ -13,13 +13,13 @@ Per-component references live in `references/`. A dash (—) means no file exist
 
 | Component | Acceptance Criteria | Code Example |
 |---|---|---|
-| Accordion *(extends Disclosure)* | `references/acceptance-criteria/Acceptance Criteria - Accordion.md` | — |
 | Interactive Control (shared base for the 7 controls below) | `references/acceptance-criteria/Acceptance Criteria - Interactive Control.md` | — |
-| Accordion | `references/acceptance-criteria/Acceptance Criteria - Accordion.md` | — |
+| Accordion *(extends Disclosure)* | `references/acceptance-criteria/Acceptance Criteria - Accordion.md` | — |
 | Button | `references/acceptance-criteria/Acceptance Criteria - Button.md` | `references/code-example/Code example - Button.md` |
+| Carousel | `references/acceptance-criteria/Acceptance Criteria - Carousel.md` | — |
 | Checkbox | `references/acceptance-criteria/Acceptance Criteria - Checkbox.md` | — |
 | Checkbox Group | `references/acceptance-criteria/Acceptance Criteria - Checkbox Group.md` | — |
-| Combobox (all variants) | Start with `references/acceptance-criteria/Acceptance Criteria - Combobox.md`, which routes to the right variant, then load the matching variant file in `references/acceptance-criteria/` | `references/code-example/Code example - Combobox.md` |
+| Combobox (all variants) | Start with `references/acceptance-criteria/Acceptance Criteria - Combobox.md`, which routes to the right variant, then load the matching variant file: `references/acceptance-criteria/Acceptance Criteria - Combobox (no autocomplete).md`, `references/acceptance-criteria/Acceptance Criteria - Combobox (list autocomplete).md`, `references/acceptance-criteria/Acceptance Criteria - Combobox (list and inline autocomplete).md`, `references/acceptance-criteria/Acceptance Criteria - Combobox (grid popup).md`, or `references/acceptance-criteria/Acceptance Criteria - Combobox (date picker).md` | `references/code-example/Code example - Combobox.md` |
 | Complex Image (diagram, graph, infographic) | `references/acceptance-criteria/Acceptance Criteria - Complex Image (e.g. diagram, graph, infographic).md` | `references/code-example/Code example - Complex Image (e.g. diagram, graph, infographic).md` |
 | Disclosure | `references/acceptance-criteria/Acceptance Criteria - Disclosure.md` | `references/code-example/Code example - Disclosure.md` |
 | Heading | `references/acceptance-criteria/Acceptance Criteria - Heading.md` | `references/code-example/Code example - Heading.md` |
@@ -27,6 +27,7 @@ Per-component references live in `references/`. A dash (—) means no file exist
 | Landmark | `references/acceptance-criteria/Acceptance Criteria - Landmark.md` | `references/code-example/Code example - Landmark.md` |
 | Link | `references/acceptance-criteria/Acceptance Criteria - Link.md` | `references/code-example/Code example - Link.md` |
 | List | `references/acceptance-criteria/Acceptance Criteria - List.md` | `references/code-example/Code example - List.md` |
+| Menu Button | `references/acceptance-criteria/Acceptance Criteria - Menu Button.md` | — |
 | Modal Dialog | `references/acceptance-criteria/Acceptance Criteria - Modal Dialog.md` | — |
 | Page Language | `references/acceptance-criteria/Acceptance Criteria - Page Language.md` | `references/code-example/Code example - Page language.md` |
 | Page Title | `references/acceptance-criteria/Acceptance Criteria - Page Title.md` | `references/code-example/Code example - Page Title.md` |

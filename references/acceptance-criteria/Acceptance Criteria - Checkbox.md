@@ -2,7 +2,7 @@
 title: "Acceptance Criteria: Checkbox"
 metadata:
   author: Intopia
-  version: "1.0"
+  version: "1.1"
 ---
 A checkbox is a form control that lets users select or clear a single independent option.
 
@@ -38,11 +38,11 @@ In addition to the Interactive Control acceptance criteria, the following accept
 
     *   **Type:** Best Practice
 
-*   There is an accessible visual indicator to identify when the checkbox is required.
+*   There is a visual indicator to identify when the checkbox is required.
 
     *   **Type:** Best Practice
 
-*   There is an accessible visual indicator to identify when the checkbox is disabled.
+*   There is a visual indicator to identify when the checkbox is disabled.
 
     *   **Type:** Best Practice
 
@@ -80,12 +80,6 @@ In addition to the Interactive Control acceptance criteria, the following accept
 
 ### **Keyboard**
 
-*   The checkbox is focusable using the keyboard.
-
-    *   **Type:** WCAG
-
-    *   **Success Criteria:** 2.1.1 Keyboard
-
 *   The checkbox can be checked and unchecked using a keyboard.
 
     *   **Type:** WCAG
@@ -93,12 +87,6 @@ In addition to the Interactive Control acceptance criteria, the following accept
     *   **Success Criteria:** 2.1.1 Keyboard
 
 ### **Visual design**
-
-*   The checkbox’s outline and checked state has a contrast ratio of 3:1 against the background colours.
-
-    *   **Type:** WCAG
-
-    *   **Success Criteria:** 1.4.11 Non-text Contrast
 
 *   The error state does not use colour as the only method to indicate an error.
 

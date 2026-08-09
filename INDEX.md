@@ -15,7 +15,7 @@ Per-component references live in `references/`. A dash (—) means no file exist
 | Button | `references/acceptance-criteria/Acceptance Criteria - Button.md` | Interactive Control | `references/code-example/Code example - Button.md` |
 | Carousel | `references/acceptance-criteria/Acceptance Criteria - Carousel.md` | Interactive Control, Button | — |
 | Checkbox | `references/acceptance-criteria/Acceptance Criteria - Checkbox.md` | Interactive Control | — |
-| Checkbox Group | `references/acceptance-criteria/Acceptance Criteria - Checkbox Group.md` | Interactive Control | — |
+| Checkbox Group | `references/acceptance-criteria/Acceptance Criteria - Checkbox Group.md` | Interactive Control, Checkbox | — |
 | Combobox (all variants) | `references/acceptance-criteria/Acceptance Criteria - Combobox.md` (its "Choosing a variant" tables route you to the variant file and any extra base) | via base file | `references/code-example/Code example - Combobox.md` |
 | Complex Image (diagram, graph, infographic) | `references/acceptance-criteria/Acceptance Criteria - Complex Image (e.g. diagram, graph, infographic).md` | — | `references/code-example/Code example - Complex Image (e.g. diagram, graph, infographic).md` |
 | Disclosure | `references/acceptance-criteria/Acceptance Criteria - Disclosure.md` | Interactive Control | `references/code-example/Code example - Disclosure.md` |

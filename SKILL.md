@@ -4,7 +4,7 @@ description: Build accessible web user interfaces that meet WCAG 2.2 Level AA. U
 user-invocable: true
 metadata:
   author: Intopia
-  version: "2.2"
+  version: "2.3"
 ---
 
 ## Overview

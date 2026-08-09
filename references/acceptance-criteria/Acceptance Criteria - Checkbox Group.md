@@ -2,11 +2,11 @@
 title: "Acceptance Criteria: Checkbox Group"
 metadata:
   author: Intopia
-  version: "1.0"
+  version: "2.0"
 ---
 A checkbox group is a related set of checkboxes that allows users to select one, many, or no options from the group.
 
-In addition to the Interactive Control acceptance criteria, the following acceptance criteria apply.
+It extends the Checkbox pattern (`references/acceptance-criteria/Acceptance Criteria - Checkbox.md`). Apply Checkbox's criteria to every checkbox in the group, then apply the additional criteria below.
 
 ### **Labels and messaging**
 
@@ -22,49 +22,21 @@ In addition to the Interactive Control acceptance criteria, the following accept
 
     *   **Success Criteria:** 2.4.6 Headings and Labels
 
-*   The checkbox has a visible label.
+*   Where the checkbox group has a constraint (for example, select at least one, or choose up to three), the constraint is stated in visible text near the group label.
 
     *   **Type:** WCAG
 
     *   **Success Criteria:** 3.3.2 Labels or Instructions
 
-*   The checkbox's label describes the purpose of the checkbox.
-
-    *   **Type:** WCAG
-
-    *   **Success Criteria:** 2.4.6 Headings and Labels
-
-*   The error message concisely and precisely describes the issue.
-
-    *   **Type:** WCAG
-
-    *   **Success Criteria:** 3.3.1 Error Identification
-
-*   The error message includes how to fix it where possible.
-
-    *   **Type:** WCAG
-
-    *   **Success Criteria:** 3.3.3 Error Suggestion
-
-*   The error message is close to the checkbox.
+*   There is a visual indicator to identify when the checkbox group is required.
 
     *   **Type:** Best Practice
 
-*   There is an accessible visual indicator to identify when the checkbox is required.
-
-    *   **Type:** Best Practice
-
-*   There is an accessible visual indicator to identify when the checkbox is disabled.
+*   The checkbox group's error message is close to the checkbox group.
 
     *   **Type:** Best Practice
 
 ### **Semantic markup**
-
-*   Each checkbox has the checkbox role in the accessibility tree.
-
-    *   **Type:** WCAG
-
-    *   **Success Criteria:** 4.1.2 Name, Role, Value
 
 *   The checkbox is part of a group. The group role is included in the accessibility tree.
 
@@ -78,62 +50,14 @@ In addition to the Interactive Control acceptance criteria, the following accept
 
     *   **Success Criteria:** 4.1.2 Name, Role, Value
 
-*   The checkbox's checked and not checked state is included in the accessibility tree.
-
-    *   **Type:** WCAG
-
-    *   **Success Criteria:** 4.1.2 Name, Role, Value
-
-*   The error message is programmatically associated with the checkbox and is included in the accessibility tree.
+*   When a visual indicator identifies that the checkbox group is required, the required state is included in the accessibility tree on the group element.
 
     *   **Type:** WCAG
 
     *   **Success Criteria:** 1.3.1 Info and Relationships
 
-*   The checkbox's required state is included in the accessibility tree.
+*   The checkbox group's error message is programmatically associated with the checkbox group and is included in the accessibility tree.
 
     *   **Type:** WCAG
 
     *   **Success Criteria:** 1.3.1 Info and Relationships
-
-*   The checkbox's disabled state is included in the accessibility tree.
-
-    *   **Type:** WCAG
-
-    *   **Success Criteria:** 1.3.1 Info and Relationships
-
-### **Keyboard**
-
-*   The checkbox is focusable using the keyboard.
-
-    *   **Type:** WCAG
-
-    *   **Success Criteria:** 2.1.1 Keyboard
-
-*   The checkbox can be checked and unchecked using a keyboard.
-
-    *   **Type:** WCAG
-
-    *   **Success Criteria:** 2.1.1 Keyboard
-
-### **Visual design**
-
-*   The checkbox’s outline and checked state has a contrast ratio of 3:1 against the background colours.
-
-    *   **Type:** WCAG
-
-    *   **Success Criteria:** 1.4.11 Non-text Contrast
-
-*   The error state does not use colour as the only method to indicate an error.
-
-    *   **Type:** WCAG
-
-    *   **Success Criteria:** 1.4.1 Use of Color
-
-### **Adaptive UI**
-
-*   The checkbox can be viewed at smaller screen widths (320px) without loss of content or functionality. The user does not have to scroll horizontally to use them.
-
-    *   **Type:** WCAG
-
-    *   **Success Criteria:** 1.4.10 Reflow

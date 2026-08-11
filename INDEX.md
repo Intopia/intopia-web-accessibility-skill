@@ -11,14 +11,14 @@ Per-component references live in `references/`. A dash (—) means no file exist
 | Component | Acceptance Criteria | Load first | Code Example |
 |---|---|---|---|
 | Interactive Control | `references/acceptance-criteria/Acceptance Criteria - Interactive Control.md` | — | — |
-| Accordion | `references/acceptance-criteria/Acceptance Criteria - Accordion.md` | Interactive Control, Disclosure | — |
+| Accordion | `references/acceptance-criteria/Acceptance Criteria - Accordion.md` | Interactive Control, Button, Disclosure | — |
 | Button | `references/acceptance-criteria/Acceptance Criteria - Button.md` | Interactive Control | `references/code-example/Code example - Button.md` |
 | Carousel | `references/acceptance-criteria/Acceptance Criteria - Carousel.md` | Interactive Control, Button | — |
 | Checkbox | `references/acceptance-criteria/Acceptance Criteria - Checkbox.md` | Interactive Control | — |
 | Checkbox Group | `references/acceptance-criteria/Acceptance Criteria - Checkbox Group.md` | Interactive Control, Checkbox | — |
 | Combobox (all variants) | `references/acceptance-criteria/Acceptance Criteria - Combobox.md` (its "Choosing a variant" tables route you to the variant file and any extra base) | via base file | `references/code-example/Code example - Combobox.md` |
 | Complex Image (diagram, graph, infographic) | `references/acceptance-criteria/Acceptance Criteria - Complex Image (e.g. diagram, graph, infographic).md` | — | `references/code-example/Code example - Complex Image (e.g. diagram, graph, infographic).md` |
-| Disclosure | `references/acceptance-criteria/Acceptance Criteria - Disclosure.md` | Interactive Control | `references/code-example/Code example - Disclosure.md` |
+| Disclosure | `references/acceptance-criteria/Acceptance Criteria - Disclosure.md` | Interactive Control, Button | `references/code-example/Code example - Disclosure.md` |
 | Heading | `references/acceptance-criteria/Acceptance Criteria - Heading.md` | — | `references/code-example/Code example - Heading.md` |
 | Image | `references/acceptance-criteria/Acceptance Criteria - Image.md` | — | `references/code-example/Code example - Image.md` |
 | Landmark | `references/acceptance-criteria/Acceptance Criteria - Landmark.md` | — | `references/code-example/Code example - Landmark.md` |
@@ -33,7 +33,7 @@ Per-component references live in `references/`. A dash (—) means no file exist
 | Table | `references/acceptance-criteria/Acceptance Criteria - Table.md` | — | `references/code-example/Code example - Table.md` |
 | Tabs | `references/acceptance-criteria/Acceptance Criteria - Tabs.md` | — | — |
 | Text Field | `references/acceptance-criteria/Acceptance Criteria - Text Field.md` | Interactive Control | `references/code-example/Code example - Text Field.md` |
-| Toggletip | `references/acceptance-criteria/Acceptance Criteria - Toggletip.md` | Interactive Control, Disclosure | — |
+| Toggletip | `references/acceptance-criteria/Acceptance Criteria - Toggletip.md` | Interactive Control, Button, Disclosure | — |
 | Tooltip | `references/acceptance-criteria/Acceptance Criteria - Tooltip.md` | trigger control *(see note)* | — |
 
 **Tooltip** builds on whichever trigger control it is added to (Button, Link, and so on, which already pull in Interactive Control), so its base is not fixed. It lists only the additional criteria for the tooltip content. The tooltip content does not contain interactive elements (for example, links, buttons, or form fields); if interactive content is needed, use the Toggletip pattern (`references/acceptance-criteria/Acceptance Criteria - Toggletip.md`) instead.

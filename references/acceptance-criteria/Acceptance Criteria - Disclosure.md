@@ -2,11 +2,11 @@
 title: "Acceptance Criteria: Disclosure"
 metadata:
   author: Intopia
-  version: "1.0"
+  version: "1.1"
 ---
 A disclosure is a button that shows or hides a section of related content.
 
-In addition to the Interactive Control acceptance criteria (`references/acceptance-criteria/Acceptance Criteria - Interactive Control.md`), the following acceptance criteria apply.
+It extends the Button pattern (`references/acceptance-criteria/Acceptance Criteria - Button.md`). Apply Button's criteria to the disclosure button, then apply the additional criteria below.
 
 ### Labels and messaging
 
@@ -18,12 +18,6 @@ In addition to the Interactive Control acceptance criteria (`references/acceptan
         
 ### Semantic markup
 
-*   The disclosure button's role of button is included in the accessibility tree.
-    
-    *   **Type:** WCAG
-        
-    *   **Success Criteria:** 4.1.2 Name, Role, Value
-        
 *   The disclosure button's expanded or collapsed state is included in the accessibility tree.
     
     *   **Type:** WCAG

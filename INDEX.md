@@ -31,7 +31,7 @@ Per-component references live in `references/`. A dash (—) means no file exist
 | Radio Group | `references/acceptance-criteria/Acceptance Criteria - Radio Group.md` | Interactive Control | `references/code-example/Code example - Radio Group.md` |
 | Select | `references/acceptance-criteria/Acceptance Criteria - Select.md` | Interactive Control | — |
 | Table | `references/acceptance-criteria/Acceptance Criteria - Table.md` | — | `references/code-example/Code example - Table.md` |
-| Tabs | `references/acceptance-criteria/Acceptance Criteria - Tabs.md` | — | — |
+| Tabs | `references/acceptance-criteria/Acceptance Criteria - Tabs.md` | Interactive Control | — |
 | Text Field | `references/acceptance-criteria/Acceptance Criteria - Text Field.md` | Interactive Control | `references/code-example/Code example - Text Field.md` |
 | Toggletip | `references/acceptance-criteria/Acceptance Criteria - Toggletip.md` | Interactive Control, Button, Disclosure | — |
 | Tooltip | `references/acceptance-criteria/Acceptance Criteria - Tooltip.md` | trigger control *(see note)* | — |

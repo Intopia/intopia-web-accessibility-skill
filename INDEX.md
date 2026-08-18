@@ -13,6 +13,7 @@ Per-component references live in `references/`. A dash (—) means no file exist
 | Interactive Control | `references/acceptance-criteria/Acceptance Criteria - Interactive Control.md` | — | — |
 | Accordion | `references/acceptance-criteria/Acceptance Criteria - Accordion.md` | Interactive Control, Button, Disclosure | — |
 | Button | `references/acceptance-criteria/Acceptance Criteria - Button.md` | Interactive Control | `references/code-example/Code example - Button.md` |
+| Card | `references/acceptance-criteria/Acceptance Criteria - Card.md` | Interactive Control, Link, Heading, Image, List | — |
 | Carousel | `references/acceptance-criteria/Acceptance Criteria - Carousel.md` | Interactive Control, Button | — |
 | Checkbox | `references/acceptance-criteria/Acceptance Criteria - Checkbox.md` | Interactive Control | — |
 | Checkbox Group | `references/acceptance-criteria/Acceptance Criteria - Checkbox Group.md` | Interactive Control, Checkbox | — |

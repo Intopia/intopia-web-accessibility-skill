@@ -60,6 +60,10 @@ In addition to the Interactive Control, Link, Heading, Image, and List acceptanc
 
     *   **Type:** Best Practice
 
+*   If the whole card has a hover state, the whole card must be clickable.
+
+    *   **Type:** Best Practice
+
 ### Adaptive UI
 
 *   The card set reflows (e.g. stacking vertically) at smaller screen widths (320px) without requiring horizontal scrolling.

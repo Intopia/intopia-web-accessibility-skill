@@ -32,33 +32,15 @@ In addition to the Interactive Control, Link, Heading, Image, and List acceptanc
 
     *   **Success Criteria:** 1.3.1 Info and Relationships
 
-*   The heading is first in the DOM/reading order, even if it is not first in the visual layout.
+*   The heading is first in the reading order, even if it is not first in the visual layout.
 
     *   **Type:** Best Practice
 
-*   If the whole card is wrapped in a link, it does not contain any interactive elements.
+*   The card does not nest any interactive elements.
 
     *   **Type:** WCAG
 
     *   **Success Criteria:** 4.1.2 Name, Role, Value
-
-*   If the whole card is wrapped in a link, only one link (typically the title link) is exposed to keyboard and screen reader users.
-
-    *   **Type:** Best Practice
-
-*   If the whole card is wrapped in a link, any duplicate call-to-action (e.g. a decorative "Read more") is not in the accessibility tree.
-
-    *   **Type:** Best Practice
-
-### Visual design
-
-*   When the whole card surface is clickable, this is indicated visually on hover.
-
-    *   **Type:** Best Practice
-
-*   Where the whole card surface is clickable people can select and highlight its text without activating  it.
-
-    *   **Type:** Best Practice
 
 ### Adaptive UI
 
@@ -67,3 +49,36 @@ In addition to the Interactive Control, Link, Heading, Image, and List acceptanc
     *   **Type:** WCAG
 
     *   **Success Criteria:** 1.4.10 Reflow
+
+### Visual design
+
+*   If the card has a hover state, the whole card is clickable.
+
+    *   **Type:** Best Practice
+
+### For cards where the whole surface is a clickable
+
+*   The card is indicated visually as clickable on hover.
+
+    *   **Type:** Best Practice
+
+#### Visual design
+
+*   People can select and highlight the card's text without activating the link.
+
+    *   **Type:** Best Practice
+
+#### Semantic markup
+
+*   Any duplicate call-to-action (e.g. a decorative "Read more") is not in the accessibility tree.
+
+    *   **Type:** Best Practice
+
+#### Pointer interaction
+
+*   Activating the card occurs on the up-event of a pointer interaction, not the down-event.
+
+    *   **Type:** WCAG
+
+    *   **Success Criteria:** 2.5.2 Pointer Cancellation
+

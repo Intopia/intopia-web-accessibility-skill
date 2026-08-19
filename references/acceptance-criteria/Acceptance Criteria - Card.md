@@ -52,11 +52,11 @@ In addition to the Interactive Control, Link, Heading, Image, and List acceptanc
 
 ### Visual design
 
-*   When the whole card surface is clickable, this is indicated visually on hover.
+*   If the whole card surface is clickable, this is indicated visually on hover.
 
     *   **Type:** Best Practice
 
-*   Where the whole card surface is clickable people can select and highlight its text without activating  it.
+*   If the whole card surface is clickable people can select and highlight its text without activating it.
 
     *   **Type:** Best Practice
 

@@ -10,68 +10,19 @@ The trigger control's own acceptance criteria (from its control type, such as Bu
 
 ### Semantic markup
 
-*   The tooltip content's accessible name is included in the accessibility tree.
-    
-    *   **Type:** WCAG
-        
-    *   **Success Criteria:** 4.1.2 Name, Role, Value
-
-*   The tooltip's content has the tooltip role in the accessibility tree.
-    
-    *   **Type:** WCAG
-        
-    *   **Success Criteria:** 4.1.2 Name, Role, Value
-        
-*   When the tooltip content is visible, it is in the accessibility tree.
-
-    *   **Type:** WCAG
-        
-    *   **Success Criteria:** 1.3.1 Info and Relationships
-
-*   The tooltip content is programmatically associated with its trigger using aria-describedby.
-    
-    *   **Type:** WCAG
-
-    *   **Success Criteria:** 1.3.1 Info and Relationships
-        
+- The tooltip content's accessible name is included in the accessibility tree. (WCAG 4.1.2)
+- The tooltip's content has the tooltip role in the accessibility tree. (WCAG 4.1.2)
+- When the tooltip content is visible, it is in the accessibility tree. (WCAG 1.3.1)
+- The tooltip content is programmatically associated with its trigger using aria-describedby. (WCAG 1.3.1)
 ### Keyboard
 
-*   The tooltip content is visible when the interactive control has focus.
-    
-    *   **Type:** WCAG
-        
-    *   **Success Criteria:** 2.1.1 Keyboard
-
-*   The tooltip content is visible when the interactive control is hovered over.
-    
-    *   **Type:** WCAG
-        
-    *   **Success Criteria:** 1.4.13 Content on Hover or Focus
-
-*   The tooltip content is dismissible by pressing the Escape key or clicking outside of it.
-    
-    *   **Type:** WCAG
-        
-    *   **Success Criteria:** 1.4.13 Content on Hover or Focus
-        
+- The tooltip content is visible when the interactive control has focus. (WCAG 2.1.1)
+- The tooltip content is visible when the interactive control is hovered over. (WCAG 1.4.13)
+- The tooltip content is dismissible by pressing the Escape key or clicking outside of it. (WCAG 1.4.13)
 ### Visual design
 
-*   The tooltip content remains visible when the mouse cursor moves from the trigger to the tooltip content itself.
-    
-    *   **Type:** WCAG
-        
-    *   **Success Criteria:** 1.4.13 Content on Hover or Focus
-
-*   The tooltip content remains visible until the trigger loses hover or focus, the user dismisses it, or the information it contains becomes invalid. It does not disappear automatically after a fixed time while the trigger still has hover or focus.
-
-    *   **Type:** WCAG
-        
-    *   **Success Criteria:** 1.4.13 Content on Hover or Focus
-
+- The tooltip content remains visible when the mouse cursor moves from the trigger to the tooltip content itself. (WCAG 1.4.13)
+- The tooltip content remains visible until the trigger loses hover or focus, the user dismisses it, or the information it contains becomes invalid. It does not disappear automatically after a fixed time while the trigger still has hover or focus. (WCAG 1.4.13)
 ### Adaptive UI
-    
-*   The tooltip content can be viewed at smaller screen widths (320px) without loss of content or functionality, and without requiring horizontal scrolling.
-    
-    *   **Type:** WCAG
-        
-    *   **Success Criteria:** 1.4.10 Reflow
+
+- The tooltip content can be viewed at smaller screen widths (320px) without loss of content or functionality, and without requiring horizontal scrolling. (WCAG 1.4.10)

@@ -8,8 +8,4 @@ An accordion is a group of disclosures, where each disclosure's button is wrappe
 
 ### Semantic markup
 
-*   The disclosure button is wrapped in an element with a role of heading in the accessibility tree.
-    
-    *   **Type:** WCAG
-        
-    *   **Success Criteria:** 1.3.1 Info and Relationships
+- The disclosure button is wrapped in an element with a role of heading in the accessibility tree. (WCAG 1.3.1)

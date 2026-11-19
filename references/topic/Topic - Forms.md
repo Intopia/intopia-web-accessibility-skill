@@ -2,55 +2,35 @@
 title: "Topic: Forms"
 metadata:
   author: Intopia
-  version: "1.0"
+  version: "1.1"
 ---
 # Forms
 
-Load this topic for any form, input, control, or validation: labels, fieldsets, input types, autocomplete, required fields, hints, error handling, and disabled/read-only states.
+## Labels and structure
+- Every input has a visible `<label>` linked with `for`/`id` (not wrapping alone). Never use `placeholder` as the label. Exception: a search field may use a search icon as its visible label if the field has an accessible name such as "Search".
+- Group related inputs (radios, checkboxes, date parts, address) in `<fieldset>` with `<legend>`.
+- Use the right `type` (`email`, `tel`, `number`, `date`, `password`, `search`, `url`) and `autocomplete` on personal data fields (WCAG 1.3.5), for example `given-name`, `email`, `new-password`.
 
-## Structure and Labels
+## Required fields
+- Mark required fields visually and programmatically (`required`, or `aria-required="true"` on custom controls).
 
-- Use `<label>` for every input. Associate explicitly with `for`/`id`; do not rely on wrapping alone.
-- Use `<fieldset>` and `<legend>` for grouped inputs (radio groups, checkboxes, date field sets, address field sets).
-- Never use `placeholder` as a substitute for a `<label>`. Placeholder text disappears on input, has insufficient contrast by default, and is not reliably announced by screen readers. **Exception:** A Search icon is a valid visual label for a search field providing the field has an accessible name e.g. Search.
+## Hints
+- Link hints with `aria-describedby`. Hints are persistent visible text, not placeholder or tooltip content.
+- If help for a field also sits in a toggletip, the field's description must still include all of it, not a summary.
 
-## Input Types
+## Errors
+- Add `novalidate` and show custom inline errors; don't rely on browser validation bubbles.
+- Each error names the field and how to fix it ("Enter your first name", not "This field is required"), and is visible text, not colour or icon alone.
+- Set `aria-invalid="true"` on invalid inputs and link the error with `aria-describedby`. Put the hint before the error in the DOM so it's read first.
+- On a failed submit, move focus to an error summary or the first invalid field. Don't put `role="alert"` or `aria-live="assertive"` on a container that receives focus.
 
-- Use the correct `type` attribute: `email`, `tel`, `number`, `date`, `password`, `search`, `url`. This provides appropriate keyboards on mobile and semantic meaning.
-- Use `autocomplete` attributes for personal data fields (e.g. `autocomplete="given-name"`, `autocomplete="email"`, `autocomplete="current-password"`). Required by WCAG 1.3.5.
-
-## Required Fields
-
-- Mark required fields both visually and programmatically.
-- Use `required` and `aria-required="true"` on the input.
-
-```
-<label for="name">Full name <span aria-hidden="true">*</span></label> <input type="text" id="name" name="name" required aria-required="true" autocomplete="name">
-```
-
-## Hints and Descriptions
-
-- Use `aria-describedby` to associate hints, constraints, or instructions with an input.
-- Place the hint element before the error message in the DOM so it is read first.
-- Hints must be persistent visible text, not placeholder or tooltip content.
-
-## Form Error Handling
-
-- Do not rely on browser-native constraint validation (e.g. `required`, `type="email"` default popups). Always provide custom inline error messages.
-- Error messages must include the field name and a resolution instruction (e.g. "Enter your first name", not "This field is required").
-- Use `aria-invalid="true"` on inputs with validation errors.
-- Use `aria-describedby` to associate the error message with the input.
-- Error messages must be visible text, not colour or icon alone.
-- On submission failure, move focus to the first error or an error summary at the top of the form.
-- Do not use `role="alert"` or `aria-live="assertive"` on error containers when focus is already being moved to the error.
-
-```
-<label for="email">Email address</label> <input  type="email"  id="email"  name="email"  required  aria-required="true"  aria-invalid="true"  aria-describedby="email-hint email-error" > <p id="email-hint">We'll never share your email.</p> <p id="email-error">Enter a valid email address.</p>
+```html
+<label for="email">Email address</label>
+<input type="email" id="email" autocomplete="email" required aria-invalid="true" aria-describedby="email-hint email-error">
+<p id="email-hint">We'll never share your email.</p>
+<p id="email-error">Enter a valid email address.</p>
 ```
 
-## Disabled and Read-only States
-
-- `disabled`: removes the element from the tab order and prevents interaction. Use only when the field genuinely cannot be used.
-- `readonly`: keeps the field focusable and its value submittable. Use when the value is visible but should not be changed.
-- Do not mark a field as both `disabled` and `required`.
-- Avoid disabling the submit button to signal an incomplete form. Keep it enabled and surface errors on submit instead.
+## Disabled and read-only
+- `disabled` removes the field from the tab order; use it only when it truly can't be used. `readonly` keeps it focusable and submitted.
+- Don't mark a field both `disabled` and `required`. Don't disable the submit button to signal an incomplete form; keep it enabled and show errors on submit.

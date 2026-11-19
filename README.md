@@ -13,12 +13,9 @@ The skill is currently in active development. Supported components include forms
 
 ## What This Repository Contains
 
-- `SKILL.md` - the main skill instructions: the generation workflow and the always-on Universal Rules.
-- `INDEX.md` - the routing table the workflow reads: a Component Index (component to its acceptance-criteria and code-example files) and a Topic Index (cross-cutting concern to its topic file).
+- `SKILL.md` - the main skill instructions: the generation workflow, the component and topic routing tables, and the always-on Core rules (semantics, keyboard and focus, colour contrast).
 - `references/acceptance-criteria/` - component-specific accessibility acceptance criteria.
-- `references/code-example/` - practical code examples for common accessible patterns.
-- `references/topic/` - cross-cutting topic guidance loaded on demand: structure and semantics, keyboard and focus, forms, images and charts, live regions and status, drag and drop, responsive and reflow.
-- `references/colour-contrast/` - colour contrast reference guidance.
+- `references/topic/` - situational topic guidance loaded on demand: forms, images and charts, live regions and status, drag and drop, responsive and reflow.
 - `scripts/check-colour-contrast.js` - Node.js script to validate contrast ratios from a palette JSON.
 - `scripts/composite-colour.js` - Node.js script to flatten an rgba/hsla colour over a background into a hex value for the palette JSON.
 - `assets/colour-contrast-template.json` - starter JSON template for contrast checks.
@@ -55,10 +52,10 @@ Provider-specific setup docs:
 
 ## How Agents Should Use It
 
-1. Open `SKILL.md` first for the generation workflow and Universal Rules.
-2. Identify the target component(s) and the cross-cutting topics the request touches, then read `INDEX.md` to locate the right files.
-3. Open the matching acceptance-criteria and `references/code-example/` files, plus any applicable `references/topic/` files.
-4. For visual UI work, include contrast resources and produce/update a palette JSON.
+1. Open `SKILL.md` first for the workflow, routing tables and Core rules.
+2. Identify the target component(s) and the topics the request touches, using the tables in `SKILL.md`.
+3. Open the matching acceptance-criteria files (each includes its code examples), plus any applicable `references/topic/` files.
+4. If the code sets colours, produce or update a palette JSON (see Colour contrast in `SKILL.md`).
 5. Run the contrast script and fix failures before finalising.
 
 ## Run Colour Contrast Checks
@@ -82,7 +79,6 @@ The script will output pass/fail results per check and return a non-zero exit co
 ```text
 intopia-accessibility-skill/
   SKILL.md
-  INDEX.md
   assets/
     colour-contrast-template.json
     tabs-palette.json
@@ -91,16 +87,14 @@ intopia-accessibility-skill/
     composite-colour.js
   references/
     acceptance-criteria/
-    code-example/
     topic/
-    colour-contrast/
 ```
 
 ## Contributing
 
 - Keep reference content practical and implementation-focused.
-- Update the Component Index and Topic Index in `INDEX.md` whenever files are added, renamed, or moved.
-- Preserve path consistency between `INDEX.md` and the actual folders.
+- Update the Components and Topics tables in `SKILL.md` whenever files are added, renamed, or moved.
+- Preserve path consistency between `SKILL.md` and the actual folders.
 - Prefer small, targeted updates with clear rationale.
 
 

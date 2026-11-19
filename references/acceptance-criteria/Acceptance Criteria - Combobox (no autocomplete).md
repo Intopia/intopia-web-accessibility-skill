@@ -8,16 +8,8 @@ A combobox without autocomplete shows the same suggestions regardless of what th
 
 In addition to acceptance criteria for combobox, the following acceptance criteria apply.
 
-### **Labels and messaging**
+### Labels and messaging
+- The description tells people they can either choose a suggestion or type their own value. (BP)
 
-*   The description tells people they can either choose a suggestion or type their own value.
-
-    *   **Type:** Best practice
-
-### **Semantic markup**
-
-*   The combobox indicates that suggestions are not related to the typed text (aria-autocomplete="none", or the attribute omitted, which is equivalent).
-
-    *   **Type:** WCAG
-
-    *   **Success Criteria:** 4.1.2 Name, Role, Value
+### Semantic markup
+- The combobox indicates that suggestions are not related to the typed text (aria-autocomplete="none", or the attribute omitted, which is equivalent). (WCAG 4.1.2)

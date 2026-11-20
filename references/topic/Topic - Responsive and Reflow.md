@@ -2,23 +2,15 @@
 title: "Topic: Responsive and Reflow"
 metadata:
   author: Intopia
-  version: "1.0"
+  version: "1.1"
 ---
-# Responsive and Reflow (WCAG 2.2 1.4.10 Reflow)
+# Responsive and Reflow (WCAG 1.4.10)
 
-Load this topic when building page layouts, multi-column structures, navigation, toolbars, or anything that must reflow at small viewport sizes.
+Content reflows at 320 CSS px wide (or 256 px high) with no loss of content or function and no two-dimensional scrolling. Data tables, complex charts, maps and toolbars are exempt where 2D layout is essential.
 
-Content must reflow without loss of information or functionality at a viewport width of 320 CSS pixels (vertical scrolling) or a height of 256 CSS pixels (horizontal scrolling). Users must not be required to scroll in two dimensions to read or interact with content. Tables, complex data visualisations, maps, and toolbars are exempt where 2D layout is essential to usage or meaning.
-
-## Layout rules
-
-- Set `<meta name="viewport" content="width=device-width, initial-scale=1">` in `<head>`.
-- Use relative units (`%`, `rem`, `em`, `vw`, `ch`) for widths, padding, and font sizes. Avoid fixed pixel widths on layout containers.
-- Build layouts with Flexbox or CSS Grid. Use `flex-wrap: wrap`, or Grid with `repeat(auto-fit, minmax(<min>, 1fr))`, so columns collapse at narrow widths.
-- Stack horizontal navigation, toolbars, button groups, and multi-column forms vertically at narrow widths (use a media query around 600–768px).
-- Allow long strings (URLs, IDs, codes, email addresses) to break with `overflow-wrap: anywhere` or `word-break: break-word`. Long unbreakable strings are a common cause of 320px overflow.
-- Avoid horizontal-only scrolling regions for primary content. If a data table or diagram genuinely requires 2D layout, wrap it in a focusable scroll container so keyboard users can reach it:
-
-<div role="region" aria-label="Quarterly sales data" tabindex="0" style="overflow-x: auto;">   <table>...</table> </div>
-
-- Hide nothing at small widths that is available at large widths. Collapsing into a menu is acceptable; removing content is not.
+- Include `<meta name="viewport" content="width=device-width, initial-scale=1">`.
+- Use relative units (`%`, `rem`, `em`, `ch`) and Flexbox/Grid with `flex-wrap: wrap` or `repeat(auto-fit, minmax(<min>, 1fr))` so columns collapse.
+- Stack navigation, toolbars, button groups and multi-column forms at narrow widths (media query around 600–768px).
+- Let long strings break: `overflow-wrap: anywhere`.
+- If a table or diagram must scroll sideways, wrap it in a focusable, named scroll container: `<div role="region" aria-label="Orders" tabindex="0" style="overflow-x:auto">`.
+- Hide nothing at small widths that exists at large widths. Collapsing into a menu is fine; removing content is not.

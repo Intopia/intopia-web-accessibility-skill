@@ -8,16 +8,7 @@ A combobox with both list and inline autocomplete behaves like list autocomplete
 
 In addition to acceptance criteria for combobox and combobox (list autocomplete) including its "with automatic selection" criteria, the following acceptance criteria apply.
 
-### **Semantic markup**
-
-*   The combobox indicates that it provides both list and inline autocomplete (aria-autocomplete="both").
-
-    *   **Type:** WCAG
-
-    *   **Success Criteria:** 4.1.2 Name, Role, Value
-
-### **Keyboard**
-
-*   The inline completion string is rendered as selected text so that continued typing replaces it, letting people ignore the suggestion and keep typing their own value.
-
-    *   **Type:** Best practice
+### Semantic markup
+- The combobox indicates that it provides both list and inline autocomplete (aria-autocomplete="both"). (WCAG 4.1.2)
+### Keyboard
+- The inline completion string is rendered as selected text so that continued typing replaces it, letting people ignore the suggestion and keep typing their own value. (BP)
